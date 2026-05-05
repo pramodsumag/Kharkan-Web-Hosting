@@ -1,7 +1,7 @@
 const links = {
   Hosting: ["Shared Hosting", "WordPress Hosting", "Business Hosting", "Reseller Hosting", "Cloud Hosting", "VPS Hosting", "Dedicated Servers"],
   Domains: ["Domain Registration", "Domain Transfer", "Bulk Domain Search", "Domain Renewal", "WHOIS Lookup", "Business Email"],
-  Company: ["About Us", "Our Team", "Careers", "Blog", "Press", "Partners", "Affiliates"],
+  Company: ["About Us|/about", "Our Team|/about#team", "Careers", "Blog", "Press", "Partners", "Affiliates"],
   Support: ["Help Center", "Contact Us|/contact", "Live Chat", "Knowledge Base", "Video Tutorials", "System Status"],
 };
 

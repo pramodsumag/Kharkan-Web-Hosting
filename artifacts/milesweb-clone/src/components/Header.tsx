@@ -25,7 +25,7 @@ const navItems = [
   },
   {
     label: "About Us",
-    children: ["About Kharkan Technology", "Our Team", "Careers", "Blog"],
+    children: ["About Kharkan Technology|/about", "Our Team|/about#team", "Careers", "Blog"],
   },
 ];
 
