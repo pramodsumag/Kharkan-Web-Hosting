@@ -25,7 +25,7 @@ const navItems = [
   },
   {
     label: "About Us",
-    children: ["About MilesWeb", "Our Team", "Careers", "Blog"],
+    children: ["About Kharkan Technology", "Our Team", "Careers", "Blog"],
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Header() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 shrink-0" data-testid="link-logo">
           <div className="flex flex-col leading-tight">
-            <span className="text-2xl font-bold text-[#1a237e]">MilesWeb</span>
+            <span className="text-2xl font-bold text-[#1a237e]">Kharkan Technology</span>
             <span className="text-[9px] text-gray-500 tracking-wide">Your Hosting, Our Responsibility.</span>
           </div>
           <span className="text-lg">🇮🇳</span>

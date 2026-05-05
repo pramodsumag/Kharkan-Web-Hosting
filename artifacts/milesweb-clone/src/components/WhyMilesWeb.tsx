@@ -8,7 +8,7 @@ const stats = [
 const reasons = [
   {
     title: "Made in India, Trusted Worldwide",
-    desc: "Founded in 2012, MilesWeb is a proudly Indian company that serves over 1 million websites globally. Our servers in India ensure low latency for Indian visitors.",
+    desc: "Founded in 2012, Kharkan Technology is a proudly Indian company that serves over 1 million websites globally. Our servers in India ensure low latency for Indian visitors.",
     emoji: "🇮🇳",
   },
   {
@@ -28,7 +28,7 @@ const reasons = [
   },
 ];
 
-export default function WhyMilesWeb() {
+export default function WhyKharkanTechnology() {
   return (
     <section className="py-16 bg-[#f0f4ff]">
       <div className="max-w-7xl mx-auto px-4">
@@ -45,10 +45,10 @@ export default function WhyMilesWeb() {
         {/* Section title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1a237e] mb-3">
-            Why choose MilesWeb?
+            Why choose Kharkan Technology?
           </h2>
           <p className="text-gray-500 text-base max-w-xl mx-auto">
-            We're not just another hosting company. MilesWeb is built around customer success — with the features, price, and support to prove it.
+            We're not just another hosting company. Kharkan Technology is built around customer success — with the features, price, and support to prove it.
           </p>
         </div>
 

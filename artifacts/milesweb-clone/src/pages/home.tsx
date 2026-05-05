@@ -6,7 +6,7 @@ import RenewalSection from "@/components/RenewalSection";
 import HostingPlans from "@/components/HostingPlans";
 import DomainSearch from "@/components/DomainSearch";
 import Features from "@/components/Features";
-import WhyMilesWeb from "@/components/WhyMilesWeb";
+import WhyKharkanTechnology from "@/components/WhyMilesWeb";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
@@ -21,7 +21,7 @@ export default function Home() {
       <HostingPlans />
       <DomainSearch />
       <Features />
-      <WhyMilesWeb />
+      <WhyKharkanTechnology />
       <Testimonials />
       <Footer />
     </div>

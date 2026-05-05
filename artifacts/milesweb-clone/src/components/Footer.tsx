@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <div className="mb-4">
-              <div className="text-2xl font-extrabold text-white">MilesWeb</div>
+              <div className="text-2xl font-extrabold text-white">Kharkan Technology</div>
               <div className="text-xs text-blue-300 mt-0.5">Your Hosting, Our Responsibility.</div>
             </div>
             <p className="text-blue-300 text-xs leading-relaxed mb-4">
@@ -71,7 +71,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-blue-400">
-            © {new Date().getFullYear()} MilesWeb Internet Services Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} Kharkan Technology Internet Services Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex gap-4">
             {["Privacy Policy", "Terms of Service", "Refund Policy", "GDPR"].map((item) => (

@@ -15,7 +15,7 @@ export default function RenewalSection() {
           Same price at renewal. Guaranteed.
         </h2>
         <p className="text-gray-500 text-base max-w-xl mx-auto mb-10">
-          Unlike other hosts that hike prices when you renew, MilesWeb keeps your rate the same — forever. What you sign up for is what you pay.
+          Unlike other hosts that hike prices when you renew, Kharkan Technology keeps your rate the same — forever. What you sign up for is what you pay.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {perks.map((perk) => (

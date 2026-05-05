@@ -3,21 +3,21 @@ const reviews = [
     name: "Rahul Sharma",
     role: "E-commerce Owner",
     stars: 5,
-    text: "MilesWeb has been an absolute game changer for my online store. The server speeds are exceptional and I haven't experienced a single minute of downtime in over 2 years. Support team responds in under 2 minutes!",
+    text: "Kharkan Technology has been an absolute game changer for my online store. The server speeds are exceptional and I haven't experienced a single minute of downtime in over 2 years. Support team responds in under 2 minutes!",
     location: "Mumbai, India",
   },
   {
     name: "Priya Mehta",
     role: "Blogger",
     stars: 5,
-    text: "Switched from another hosting provider after constant slowdowns. MilesWeb's LiteSpeed servers made my blog load 5x faster. My Google rankings improved within weeks. The price lock guarantee is a huge bonus.",
+    text: "Switched from another hosting provider after constant slowdowns. Kharkan Technology's LiteSpeed servers made my blog load 5x faster. My Google rankings improved within weeks. The price lock guarantee is a huge bonus.",
     location: "Bengaluru, India",
   },
   {
     name: "Vikram Singh",
     role: "Digital Agency",
     stars: 5,
-    text: "We manage over 50 client websites on MilesWeb. The reliability and support are unmatched. Their reseller hosting is excellent and the control panel is easy for our clients to use too.",
+    text: "We manage over 50 client websites on Kharkan Technology. The reliability and support are unmatched. Their reseller hosting is excellent and the control panel is easy for our clients to use too.",
     location: "Delhi, India",
   },
   {
@@ -31,7 +31,7 @@ const reviews = [
     name: "Siddharth Rao",
     role: "Startup Founder",
     stars: 5,
-    text: "As a startup on a budget, MilesWeb's pricing was perfect. Starting at ₹69/mo with all features included was incredible value. Scaling has been seamless as our traffic grew.",
+    text: "As a startup on a budget, Kharkan Technology's pricing was perfect. Starting at ₹69/mo with all features included was incredible value. Scaling has been seamless as our traffic grew.",
     location: "Hyderabad, India",
   },
   {
@@ -68,7 +68,7 @@ export default function Testimonials() {
             What our customers say
           </h2>
           <p className="text-gray-500 text-base max-w-xl mx-auto">
-            Over 13,000+ verified reviews — here's what real customers think about MilesWeb.
+            Over 13,000+ verified reviews — here's what real customers think about Kharkan Technology.
           </p>
         </div>
 
