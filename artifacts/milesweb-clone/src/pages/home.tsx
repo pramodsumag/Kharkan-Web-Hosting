@@ -14,6 +14,7 @@ import RatingSection from "@/components/RatingSection";
 import TrustSection from "@/components/TrustSection";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import FloatingChat from "@/components/FloatingChat";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <TrustSection />
       <Testimonials />
       <Footer />
+      <FloatingChat />
     </div>
   );
 }
