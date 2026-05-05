@@ -75,27 +75,29 @@ export default function Hero() {
 
         {/* Right Visual */}
         <div className="relative flex justify-center">
-          <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-gray-100 p-6 w-full max-w-xl shadow-lg">
+          <div className="relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-gray-100 p-5 w-full max-w-xl shadow-lg">
             {/* WWW bar */}
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-white border border-dashed border-gray-300 rounded px-3 py-1.5 text-xs font-mono text-gray-400 flex items-center gap-1">
-                <span>www</span>
+              <div className="bg-white border border-dashed border-gray-300 rounded px-3 py-1.5 text-xs font-mono text-gray-400">
+                www
               </div>
               <div className="flex-1 h-px border-t border-dashed border-gray-200" />
             </div>
 
-            {/* SALE text large */}
-            <div className="absolute top-6 right-6 text-4xl font-black text-gray-100 tracking-widest select-none">
+            {/* SALE watermark */}
+            <div className="absolute top-5 right-5 text-4xl font-black text-gray-100 tracking-widest select-none pointer-events-none">
               SALE
             </div>
 
-            {/* Main image placeholder with discount badge */}
-            <div className="relative h-56 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl overflow-hidden flex items-center justify-center border border-amber-100">
-              {/* Simulated person silhouette */}
-              <div className="absolute inset-0 flex items-end justify-center pb-0">
-                <div className="w-40 h-48 bg-gradient-to-b from-amber-300 to-amber-500 rounded-t-full opacity-80" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
+            {/* Girl with laptop image */}
+            <div className="relative h-64 rounded-xl overflow-hidden border border-amber-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=400&fit=crop&crop=top"
+                alt="Happy girl working on laptop"
+                className="w-full h-full object-cover object-top"
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-blue-900/10" />
 
               {/* 80% OFF badge */}
               <div className="absolute bottom-4 right-4 bg-white rounded-xl shadow-lg px-4 py-3 text-center">
