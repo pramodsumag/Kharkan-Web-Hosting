@@ -21,7 +21,7 @@ const navItems = [
   { label: "Pricing", children: [] },
   {
     label: "Support",
-    children: ["Help Center", "Contact Us", "Live Chat", "Knowledge Base"],
+    children: ["Help Center", "Contact Us|/contact", "Live Chat", "Knowledge Base"],
   },
   {
     label: "About Us",
@@ -72,15 +72,18 @@ export default function Header() {
               </button>
               {item.children.length > 0 && openMenu === item.label && (
                 <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg shadow-xl min-w-48 py-2 mt-1 z-50">
-                  {item.children.map((child) => (
-                    <a
-                      key={child}
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1565c0] transition-colors"
-                    >
-                      {child}
-                    </a>
-                  ))}
+                  {item.children.map((child) => {
+                    const [label, href] = child.includes("|") ? child.split("|") : [child, "#"];
+                    return (
+                      <a
+                        key={label}
+                        href={href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1565c0] transition-colors"
+                      >
+                        {label}
+                      </a>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -145,15 +148,18 @@ export default function Header() {
                 </button>
                 {openMenu === item.label && item.children.length > 0 && (
                   <div className="ml-4 mt-1 mb-1 border-l-2 border-blue-100 pl-3 space-y-0.5">
-                    {item.children.map((child) => (
-                      <a
-                        key={child}
-                        href="#"
-                        className="block py-2 text-sm text-gray-600 hover:text-[#1565c0] transition-colors"
-                      >
-                        {child}
-                      </a>
-                    ))}
+                    {item.children.map((child) => {
+                      const [label, href] = child.includes("|") ? child.split("|") : [child, "#"];
+                      return (
+                        <a
+                          key={label}
+                          href={href}
+                          className="block py-2 text-sm text-gray-600 hover:text-[#1565c0] transition-colors"
+                        >
+                          {label}
+                        </a>
+                      );
+                    })}
                   </div>
                 )}
               </div>

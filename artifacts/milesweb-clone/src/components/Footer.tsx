@@ -2,7 +2,7 @@ const links = {
   Hosting: ["Shared Hosting", "WordPress Hosting", "Business Hosting", "Reseller Hosting", "Cloud Hosting", "VPS Hosting", "Dedicated Servers"],
   Domains: ["Domain Registration", "Domain Transfer", "Bulk Domain Search", "Domain Renewal", "WHOIS Lookup", "Business Email"],
   Company: ["About Us", "Our Team", "Careers", "Blog", "Press", "Partners", "Affiliates"],
-  Support: ["Help Center", "Contact Us", "Live Chat", "Knowledge Base", "Video Tutorials", "System Status"],
+  Support: ["Help Center", "Contact Us|/contact", "Live Chat", "Knowledge Base", "Video Tutorials", "System Status"],
 };
 
 export default function Footer() {
@@ -51,16 +51,19 @@ export default function Footer() {
             <div key={heading}>
               <h4 className="text-sm font-bold text-white mb-3">{heading}</h4>
               <ul className="space-y-2">
-                {items.map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-xs text-blue-300 hover:text-white transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {items.map((item) => {
+                  const [label, href] = item.includes("|") ? item.split("|") : [item, "#"];
+                  return (
+                    <li key={label}>
+                      <a
+                        href={href}
+                        className="text-xs text-blue-300 hover:text-white transition-colors"
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
