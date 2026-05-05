@@ -20,7 +20,7 @@ export default function Footer() {
             className="bg-white text-[#1565c0] font-bold text-sm px-7 py-3 rounded-lg hover:bg-blue-50 transition-colors shrink-0"
             data-testid="button-footer-cta"
           >
-            Start Now — ₹69/mo
+            Start Now — ₹39/mo
           </a>
         </div>
       </div>

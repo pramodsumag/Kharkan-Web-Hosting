@@ -10,7 +10,7 @@ const features = [
   { label: "India Data Center",            kt: true,   others: false },
   { label: "NVMe SSD Storage",             kt: true,   others: false },
   { label: "Free Migration Service",       kt: true,   others: "Paid" },
-  { label: "Price starts at",             kt: "₹69/mo", others: "₹199/mo+" },
+  { label: "Price starts at",             kt: "₹39/mo", others: "₹199/mo+" },
 ];
 
 function Cell({ val }: { val: boolean | string }) {

@@ -46,7 +46,7 @@ export default function Hero() {
           <div className="space-y-1">
             <div className="flex items-end gap-1">
               <span className="text-base text-gray-600 font-medium">₹</span>
-              <span className="text-5xl font-extrabold text-[#1a237e]">69.00</span>
+              <span className="text-5xl font-extrabold text-[#1a237e]">39.00</span>
               <span className="text-gray-500 text-base mb-1">/mo</span>
             </div>
             <a

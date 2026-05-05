@@ -4,8 +4,8 @@ const plans = [
   {
     name: "Starter",
     subtitle: "Perfect for beginners",
-    price: "69",
-    originalPrice: "345",
+    price: "39",
+    originalPrice: "195",
     discount: "80% OFF",
     features: [
       "1 Website",
@@ -25,8 +25,8 @@ const plans = [
   {
     name: "Advanced",
     subtitle: "Best for growing sites",
-    price: "149",
-    originalPrice: "745",
+    price: "69",
+    originalPrice: "345",
     discount: "80% OFF",
     features: [
       "Unlimited Websites",
@@ -46,8 +46,8 @@ const plans = [
   {
     name: "Ultimate",
     subtitle: "For high-traffic websites",
-    price: "299",
-    originalPrice: "1495",
+    price: "99",
+    originalPrice: "495",
     discount: "80% OFF",
     features: [
       "Unlimited Websites",
