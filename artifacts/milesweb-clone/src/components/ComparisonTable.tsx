@@ -28,7 +28,7 @@ export default function ComparisonTable() {
             ⚔️ Head-to-Head
           </div>
           <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-3">
-            Kharkan Technology vs Others
+            Kharkan Technology vs Hostinger
           </h2>
           <p className="text-blue-300 text-base max-w-xl mx-auto">
             Who delivers more value? See the real difference side by side.
@@ -44,8 +44,8 @@ export default function ComparisonTable() {
               <div className="text-xs text-blue-300 mt-0.5">🇮🇳 Your Hosting Partner</div>
             </div>
             <div className="p-5 font-bold text-center">
-              <div className="text-base font-black text-blue-300">Other Hosts</div>
-              <div className="text-xs text-blue-400 mt-0.5">Typical competitors</div>
+              <div className="text-base font-black text-blue-300">Hostinger</div>
+              <div className="text-xs text-blue-400 mt-0.5">Typical competitor</div>
             </div>
           </div>
 
