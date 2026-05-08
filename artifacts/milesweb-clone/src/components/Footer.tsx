@@ -9,15 +9,15 @@ export default function Footer() {
   return (
     <footer className="bg-[#0d1240] text-white">
       {/* CTA Strip */}
-      <div className="bg-[#1565c0] py-10">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="bg-[#1565c0] py-8 lg:py-10">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
-            <h3 className="text-xl font-bold text-white mb-1">Ready to launch your website?</h3>
+            <h3 className="text-lg lg:text-xl font-bold text-white mb-1">Ready to launch your website?</h3>
             <p className="text-blue-200 text-sm">Get started today with 80% off + free domain. Cancel anytime.</p>
           </div>
           <a
             href="#plans"
-            className="bg-white text-[#1565c0] font-bold text-sm px-7 py-3 rounded-lg hover:bg-blue-50 transition-colors shrink-0"
+            className="bg-white text-[#1565c0] font-bold text-sm px-7 py-3 rounded-lg hover:bg-blue-50 transition-colors shrink-0 w-full sm:w-auto text-center"
             data-testid="button-footer-cta"
           >
             Start Now — ₹39/mo
@@ -25,19 +25,19 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Brand */}
-          <div className="col-span-2 lg:col-span-1">
-            <div className="mb-4">
-              <div className="text-2xl font-extrabold text-white">Kharkan Technology</div>
+      {/* Main footer grid */}
+      <div className="max-w-7xl mx-auto px-4 py-10 lg:py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+          {/* Brand — full width on mobile */}
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+            <div className="mb-3">
+              <div className="text-xl font-extrabold text-white">Kharkan Technology</div>
               <div className="text-xs text-blue-300 mt-0.5">Your Hosting, Our Responsibility.</div>
             </div>
-            <p className="text-blue-300 text-xs leading-relaxed mb-4">
+            <p className="text-blue-300 text-xs leading-relaxed mb-4 max-w-xs">
               India's leading web hosting company, serving over 1 million websites since 2012.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2.5">
               {["📘", "🐦", "📸", "▶️", "💼"].map((icon, i) => (
                 <a key={i} href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-sm hover:bg-white/20 transition-colors">
                   {icon}
@@ -72,13 +72,13 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-blue-400">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2 items-center sm:flex-row sm:justify-between">
+          <p className="text-xs text-blue-400 text-center sm:text-left">
             © {new Date().getFullYear()} Kharkan Technology Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             {["Privacy Policy", "Terms of Service", "Refund Policy", "GDPR"].map((item) => (
-              <a key={item} href="#" className="text-xs text-blue-400 hover:text-white transition-colors">
+              <a key={item} href="#" className="text-xs text-blue-400 hover:text-white transition-colors whitespace-nowrap">
                 {item}
               </a>
             ))}

@@ -338,24 +338,78 @@
   .float-ch-title { font-size: 13px; font-weight: 700; color: #222; }
   .float-ch-sub { font-size: 11px; color: #999; }
 
+  /* ── MOBILE HERO CARD ── */
+  .hero-mobile-card { display: none; }
+  .hero-mobile-stats { display: none; }
+  .hero-dual-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .cta-outline {
+    border: 2px solid #1565c0; color: #1565c0; font-weight: 700; font-size: 15px;
+    padding: 13px 28px; border-radius: 10px; display: inline-block; transition: background .15s;
+  }
+  .cta-outline:hover { background: #e8eaf6; }
+
+  /* ── MOBILE PLAN TABS ── */
+  .plan-tabs { display: none; background: #fff; border-radius: 14px; padding: 6px; gap: 4px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .plan-tab {
+    flex: 1; padding: 10px 6px; border-radius: 10px; border: none; cursor: pointer;
+    font-size: 13px; font-weight: 700; background: none; color: #777; font-family: inherit; transition: all .15s;
+  }
+  .plan-tab.active { background: #1565c0; color: #fff; }
+  .plan-card-wrap { display: none; }
+  .plan-card-wrap.active { display: block; }
+
+  /* ── MOBILE PROOF BANNER ── */
+  .mobile-proof-bar { display: none; background: linear-gradient(90deg,#1a237e,#1565c0); padding: 10px 16px; overflow-x: auto; white-space: nowrap; }
+  .mobile-proof-item { display: inline-flex; align-items: center; gap: 6px; color: #fff; font-size: 12px; font-weight: 600; margin-right: 20px; }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { display: none; }
     .hamburger { display: flex; }
     .header-actions .btn-ghost { display: none; }
-    #hero { grid-template-columns: 1fr; }
+    #hero { grid-template-columns: 1fr; padding: 28px 16px 24px; gap: 20px; }
     .hero-visual { display: none; }
-    .plans-grid { grid-template-columns: 1fr; }
+    .hero-mobile-card { display: block; border-radius: 16px; overflow: hidden; position: relative; box-shadow: 0 8px 24px rgba(21,101,192,.16); }
+    .hero-mobile-card img { width: 100%; height: 200px; object-fit: cover; object-position: top; }
+    .hero-mobile-card .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,35,126,.8) 40%, transparent 100%); }
+    .hero-mobile-card .ovr-content { position: absolute; bottom: 14px; left: 16px; right: 16px; display: flex; align-items: flex-end; justify-content: space-between; }
+    .hero-mobile-card .price-lbl { font-size: 10px; color: #b3c9ef; }
+    .hero-mobile-card .price-big { font-size: 32px; font-weight: 900; color: #fff; line-height: 1; }
+    .hero-mobile-card .price-per { font-size: 13px; color: #b3c9ef; font-weight: 500; }
+    .hero-mobile-card .badge-80 { background: #fff; border-radius: 10px; padding: 8px 12px; text-align: center; }
+    .hero-mobile-card .badge-80 .pct { font-size: 22px; font-weight: 900; color: #1a237e; }
+    .hero-mobile-card .badge-80 .off { font-size: 10px; font-weight: 700; color: #1565c0; }
+    .hero-mobile-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+    .hero-mobile-stat { background: #e8eaf6; border-radius: 10px; padding: 10px 8px; text-align: center; }
+    .hero-mobile-stat .sv { font-size: 16px; font-weight: 900; color: #1565c0; }
+    .hero-mobile-stat .sl { font-size: 10px; color: #666; margin-top: 1px; }
+    .plans-grid { display: none; }
+    .plan-tabs { display: flex; }
+    .plan-card-wrap.active { display: block; }
     .footer-main { grid-template-columns: 1fr 1fr; }
     .features-grid { grid-template-columns: 1fr 1fr; }
-    .t-grid { grid-template-columns: 1fr; }
+    .t-grid { grid-template-columns: 1fr 1fr; }
     .about-inner { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
+    .mobile-proof-bar { display: block; }
+    #hero h1 { font-size: 28px; }
+    .footer-cta-strip { text-align: center; justify-content: center; flex-direction: column; }
+    .footer-bottom { display: flex; flex-direction: column; gap: 8px; align-items: center; font-size: 11px; }
+    .footer-bottom-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
   }
-  @media (max-width: 480px) {
-    .footer-main { grid-template-columns: 1fr; }
-    .features-grid { grid-template-columns: 1fr; }
+  @media (max-width: 540px) {
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .t-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
+    #hero h1 { font-size: 26px; }
+    .hero-dual-cta { flex-direction: column; }
+    .cta-primary, .cta-outline { text-align: center; width: 100%; }
+    .trustbar-inner { gap: 12px; }
+    .trust-stat .val { font-size: 20px; }
+  }
+  @media (max-width: 360px) {
+    .footer-main { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -447,6 +501,15 @@
   </div>
 </header>
 
+<!-- MOBILE PROOF BANNER (shown only on mobile) -->
+<div class="mobile-proof-bar">
+  <span class="mobile-proof-item">⭐ 4.8/5 Trustpilot</span>
+  <span class="mobile-proof-item">🌐 1M+ Sites</span>
+  <span class="mobile-proof-item">🇮🇳 Indian Company</span>
+  <span class="mobile-proof-item">✅ 99.99% Uptime</span>
+  <span class="mobile-proof-item">🔒 Free SSL</span>
+</div>
+
 <!-- HERO -->
 <section>
   <div id="hero">
@@ -467,7 +530,10 @@
         </div>
         <a class="hero-price-link" href="#plans">Same price at renewal – Guaranteed.</a>
       </div>
-      <a class="cta-primary" href="#plans">Start Now</a>
+      <div class="hero-dual-cta">
+        <a class="cta-primary" href="#plans">Start Now — ₹39/mo</a>
+        <a class="cta-outline" href="#plans">View All Plans</a>
+      </div>
       <div class="cta-note">🔒 30-day money-back guarantee • Cancel anytime</div>
       <div class="hero-trust">
         <div class="hero-trust-chip">⭐ 4.8/5 Trustpilot</div>
@@ -475,9 +541,29 @@
         <div class="hero-trust-chip">🔒 99.99% Uptime</div>
       </div>
     </div>
+
+    <!-- Desktop visual -->
     <div class="hero-visual">
       <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&h=400&fit=crop&crop=top" alt="Professional using laptop" />
       <div class="hero-float-badge">80%<small>OFF</small></div>
+    </div>
+
+    <!-- Mobile visual card -->
+    <div class="hero-mobile-card">
+      <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&h=340&fit=crop&crop=top" alt="Professional working on laptop" />
+      <div class="overlay"></div>
+      <div class="ovr-content">
+        <div>
+          <div class="price-lbl">Starting at</div>
+          <div class="price-big">₹39<span class="price-per">/mo</span></div>
+        </div>
+        <div class="badge-80"><div class="pct">80%</div><div class="off">OFF</div></div>
+      </div>
+    </div>
+    <div class="hero-mobile-stats">
+      <div class="hero-mobile-stat"><div class="sv">99.99%</div><div class="sl">Uptime</div></div>
+      <div class="hero-mobile-stat"><div class="sv">24/7</div><div class="sl">Support</div></div>
+      <div class="hero-mobile-stat"><div class="sv">1M+</div><div class="sl">Websites</div></div>
     </div>
   </div>
 </section>
@@ -501,6 +587,65 @@
       <h2>Shared Hosting Plans</h2>
       <p>All plans include free domain, SSL, and 24/7 support. No renewal price hike — ever.</p>
     </div>
+    <!-- Mobile tab switcher -->
+    <div class="plan-tabs" id="plan-tabs">
+      <button class="plan-tab" onclick="switchPlan(0)">Starter</button>
+      <button class="plan-tab active" onclick="switchPlan(1)">Advanced ⭐</button>
+      <button class="plan-tab" onclick="switchPlan(2)">Ultimate</button>
+    </div>
+
+    <!-- Mobile: individual card wrappers -->
+    <div class="plan-card-wrap" id="pw-0">
+      <div class="plan-card">
+        <div class="plan-name">Starter</div>
+        <div class="plan-sub">Perfect for beginners</div>
+        <div class="plan-tag">80% OFF</div>
+        <div class="plan-orig">₹195</div>
+        <div class="plan-price-row"><span class="cur">₹</span><span class="amt">39</span><span class="per">/mo</span></div>
+        <div class="plan-billing">billed annually + GST</div>
+        <button class="plan-btn outline" onclick="location.href='#'">Get Started</button>
+        <ul class="plan-features">
+          <li>1 Website</li><li>SSD Storage: 30 GB</li><li>Free SSL Certificate</li>
+          <li>Free Domain (1st year)</li><li>Unlimited Bandwidth</li><li>3 Email Accounts</li>
+          <li>Daily Backups</li><li>LiteSpeed Server</li><li>99.95% Uptime SLA</li><li>24/7 Customer Support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="plan-card-wrap active" id="pw-1">
+      <div class="plan-card popular">
+        <div class="popular-pill">⭐ Most Popular</div>
+        <div class="plan-name">Advanced</div>
+        <div class="plan-sub">Best for growing sites</div>
+        <div class="plan-tag">80% OFF</div>
+        <div class="plan-orig">₹345</div>
+        <div class="plan-price-row"><span class="cur">₹</span><span class="amt">69</span><span class="per">/mo</span></div>
+        <div class="plan-billing">billed annually + GST</div>
+        <button class="plan-btn solid" onclick="location.href='#'">Get Started</button>
+        <ul class="plan-features">
+          <li>Unlimited Websites</li><li>SSD Storage: Unlimited</li><li>Free SSL Certificate</li>
+          <li>Free Domain (1st year)</li><li>Unlimited Bandwidth</li><li>Unlimited Email Accounts</li>
+          <li>Daily Backups</li><li>LiteSpeed Server</li><li>99.95% Uptime SLA</li><li>Priority 24/7 Support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="plan-card-wrap" id="pw-2">
+      <div class="plan-card">
+        <div class="plan-name">Ultimate</div>
+        <div class="plan-sub">For high-traffic websites</div>
+        <div class="plan-tag">80% OFF</div>
+        <div class="plan-orig">₹495</div>
+        <div class="plan-price-row"><span class="cur">₹</span><span class="amt">99</span><span class="per">/mo</span></div>
+        <div class="plan-billing">billed annually + GST</div>
+        <button class="plan-btn outline" onclick="location.href='#'">Get Started</button>
+        <ul class="plan-features">
+          <li>Unlimited Websites</li><li>SSD Storage: Unlimited</li><li>Free Wildcard SSL</li>
+          <li>Free Domain (1st year)</li><li>Unlimited Bandwidth</li><li>Unlimited Email Accounts</li>
+          <li>Daily Backups + On-demand</li><li>LiteSpeed + CloudLinux</li><li>99.99% Uptime SLA</li><li>Dedicated Support Manager</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Desktop: 3-column grid -->
     <div class="plans-grid">
       <!-- Starter -->
       <div class="plan-card">
@@ -723,8 +868,13 @@
     <div class="fcol"><h4>Support</h4><ul><li><a href="#">Help Center</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#">Live Chat</a></li><li><a href="#">Knowledge Base</a></li><li><a href="#">Video Tutorials</a></li><li><a href="#">System Status</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    © 2025 Kharkan Technology Pvt. Ltd. All rights reserved. &nbsp;|&nbsp;
-    <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a> &nbsp;|&nbsp; <a href="#">Refund Policy</a>
+    <span>© 2025 Kharkan Technology Pvt. Ltd. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Refund Policy</a>
+      <a href="#">GDPR</a>
+    </div>
   </div>
 </footer>
 
@@ -835,6 +985,14 @@ function submitContact(e) {
     document.getElementById('contact-success').style.display = 'block';
     btn.style.display = 'none';
   }, 1200);
+}
+
+// ── PLAN TAB SWITCHER (mobile) ──
+function switchPlan(idx) {
+  var tabs = document.querySelectorAll('.plan-tab');
+  var wraps = document.querySelectorAll('.plan-card-wrap');
+  tabs.forEach(function(t, i) { t.classList.toggle('active', i === idx); });
+  wraps.forEach(function(w, i) { w.classList.toggle('active', i === idx); });
 }
 
 // ── FLOATING CHAT ──

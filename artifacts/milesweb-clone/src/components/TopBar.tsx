@@ -20,18 +20,26 @@ export default function TopBar() {
   const pad = (n: number) => String(n).padStart(2, "0");
 
   return (
-    <div className="bg-black text-white text-sm py-2 text-center">
-      <span className="text-gray-300">Limited-time savings — ends in </span>
-      <span className="font-bold mx-1">{pad(time.h)}H</span>
-      <span className="font-bold mx-1">{pad(time.m)}M</span>
-      <span className="font-bold mx-1">{pad(time.s)}S</span>
-      <a
-        href="#plans"
-        className="ml-3 underline text-white font-semibold hover:text-gray-300 transition-colors"
-        data-testid="link-view-plans"
-      >
-        View Plans
-      </a>
+    <div className="bg-[#1a237e] text-white text-xs sm:text-sm py-2 px-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+        <span className="text-blue-200 hidden sm:inline">Limited-time savings — ends in</span>
+        <span className="text-blue-200 sm:hidden">Sale ends in</span>
+        <div className="flex items-center gap-1 font-bold">
+          <span className="bg-white text-[#1a237e] rounded px-1.5 py-0.5 text-xs font-black tabular-nums">{pad(time.h)}</span>
+          <span className="text-blue-300">H</span>
+          <span className="bg-white text-[#1a237e] rounded px-1.5 py-0.5 text-xs font-black tabular-nums">{pad(time.m)}</span>
+          <span className="text-blue-300">M</span>
+          <span className="bg-white text-[#1a237e] rounded px-1.5 py-0.5 text-xs font-black tabular-nums">{pad(time.s)}</span>
+          <span className="text-blue-300">S</span>
+        </div>
+        <a
+          href="#plans"
+          className="bg-[#ffeb3b] text-[#1a237e] font-bold text-xs px-3 py-1 rounded-full hover:bg-yellow-300 transition-colors whitespace-nowrap"
+          data-testid="link-view-plans"
+        >
+          View Plans →
+        </a>
+      </div>
     </div>
   );
 }

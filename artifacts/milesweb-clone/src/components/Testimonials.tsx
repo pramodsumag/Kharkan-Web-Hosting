@@ -31,7 +31,7 @@ const reviews = [
     name: "Siddharth Rao",
     role: "Startup Founder",
     stars: 5,
-    text: "As a startup on a budget, Kharkan Technology's pricing was perfect. Starting at ₹69/mo with all features included was incredible value. Scaling has been seamless as our traffic grew.",
+    text: "As a startup on a budget, Kharkan Technology's pricing was perfect. Starting at just ₹39/mo with all features included was incredible value. Scaling has been seamless as our traffic grew.",
     location: "Hyderabad, India",
   },
   {
@@ -57,26 +57,26 @@ function Stars({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+        <div className="text-center mb-8 lg:mb-12">
+          <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
             <span>⭐</span>
             <span>Excellent 4.8/5 on Trustpilot</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1a237e] mb-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1a237e] mb-3">
             What our customers say
           </h2>
-          <p className="text-gray-500 text-base max-w-xl mx-auto">
+          <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
             Over 13,000+ verified reviews — here's what real customers think about Kharkan Technology.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {reviews.map((r) => (
             <div
               key={r.name}
-              className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-blue-100 hover:shadow-md transition-all"
+              className="bg-gray-50 rounded-2xl p-5 lg:p-6 border border-gray-100 hover:border-blue-100 hover:shadow-md transition-all"
               data-testid={`card-review-${r.name.split(" ")[0].toLowerCase()}`}
             >
               <Stars count={r.stars} />
