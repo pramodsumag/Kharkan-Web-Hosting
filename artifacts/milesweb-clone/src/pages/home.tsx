@@ -108,11 +108,11 @@ export default function Home() {
       <TopBar />
       <Header />
       <Hero />
+      <DomainSearch />
       <TrustBar />
       <RenewalSection />
       <HostingPlans />
       <MoneyBack />
-      <DomainSearch />
       <Features />
       <ComparisonTable />
       <WhyKharkanTechnology />
