@@ -9,6 +9,8 @@ const slides = [
     badge: "🚀 #1 Hosting in India",
     title: "Web Hosting",
     subtitle: "Launch your website in minutes",
+    subtitleStart: "Launch your website",
+    highlights: ["in minutes", "right now", "today"],
     desc: "Blazing-fast shared hosting powered by LiteSpeed with 99.99% uptime, free SSL, and a free domain for 1 year.",
     price: "₹39",
     priceLabel: "/mo",
@@ -30,6 +32,8 @@ const slides = [
     badge: "🌍 500+ Extensions Available",
     title: "Domain Name",
     subtitle: "Claim your perfect domain today",
+    subtitleStart: "Claim your perfect",
+    highlights: ["domain today", "web address", "brand name"],
     desc: "Search from 500+ TLDs including .in, .com, .net and more — with free DNS management and WHOIS privacy protection.",
     price: "₹99",
     priceLabel: "/yr",
@@ -51,6 +55,8 @@ const slides = [
     badge: "⚡ Most Popular Choice",
     title: "WordPress Hosting",
     subtitle: "Purpose-built for WordPress",
+    subtitleStart: "Purpose-built",
+    highlights: ["for WordPress", "for bloggers", "for speed"],
     desc: "Optimised WordPress stack with auto-updates, staging, and Jetpack pre-installed. Go live in one click.",
     price: "₹69",
     priceLabel: "/mo",
@@ -72,6 +78,8 @@ const slides = [
     badge: "⚙️ Full Root Access",
     title: "VPS Hosting",
     subtitle: "Dedicated power, cloud flexibility",
+    subtitleStart: "Dedicated power,",
+    highlights: ["cloud flexibility", "full control", "instant scale"],
     desc: "SSD NVMe-powered VPS with full root access, choice of OS, and instant horizontal scaling. No shared resources.",
     price: "₹299",
     priceLabel: "/mo",
@@ -93,6 +101,8 @@ const slides = [
     badge: "☁️ Auto-Scaling Infrastructure",
     title: "Cloud Hosting",
     subtitle: "Scale without limits, pay as you grow",
+    subtitleStart: "Scale without limits,",
+    highlights: ["pay as you grow", "no surprises", "total freedom"],
     desc: "Enterprise-grade cloud infrastructure with auto-scaling, load balancing, and 100% resource isolation.",
     price: "₹199",
     priceLabel: "/mo",
@@ -114,6 +124,8 @@ const slides = [
     badge: "🏆 Maximum Performance",
     title: "Dedicated Server",
     subtitle: "Your entire server, yours alone",
+    subtitleStart: "Your entire server,",
+    highlights: ["yours alone", "full control", "zero sharing"],
     desc: "Bare-metal dedicated servers with Intel Xeon processors, NVMe RAID storage, and unmetered bandwidth.",
     price: "₹4,999",
     priceLabel: "/mo",
@@ -135,6 +147,8 @@ const slides = [
     badge: "📧 Professional Identity",
     title: "Business Email",
     subtitle: "Email that means business",
+    subtitleStart: "Email that",
+    highlights: ["means business", "builds trust", "wins clients"],
     desc: "Custom domain email with 50 GB mailbox, spam protection, calendar, and collaboration tools built in.",
     price: "₹29",
     priceLabel: "/user/mo",
@@ -156,6 +170,8 @@ const slides = [
     badge: "💼 Start Your Hosting Business",
     title: "Reseller Hosting",
     subtitle: "Build your own hosting brand",
+    subtitleStart: "Build your own",
+    highlights: ["hosting brand", "recurring income", "white-label biz"],
     desc: "White-label reseller hosting with WHM/cPanel, free WHMCS license, and private nameservers included.",
     price: "₹499",
     priceLabel: "/mo",
@@ -177,6 +193,8 @@ const slides = [
     badge: "🎨 Custom Web Solutions",
     title: "Web Development",
     subtitle: "Beautiful websites that convert",
+    subtitleStart: "Beautiful websites",
+    highlights: ["that convert", "that impress", "that rank #1"],
     desc: "From landing pages to enterprise portals — our expert team builds fast, responsive, SEO-optimised websites.",
     price: "₹9,999",
     priceLabel: " onwards",
@@ -198,6 +216,8 @@ const slides = [
     badge: "🧩 End-to-End Tech Solutions",
     title: "Software Development",
     subtitle: "Custom software, built to scale",
+    subtitleStart: "Custom software,",
+    highlights: ["built to scale", "made for you", "delivered fast"],
     desc: "We build SaaS products, mobile apps, APIs, and enterprise software tailored to your business requirements.",
     price: "₹24,999",
     priceLabel: " onwards",
@@ -217,6 +237,7 @@ const slides = [
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
+  const [highlightIdx, setHighlightIdx] = useState(0);
 
   const goTo = useCallback(
     (idx: number) => {
@@ -238,6 +259,17 @@ export default function Hero() {
     const t = setInterval(next, 5500);
     return () => clearInterval(t);
   }, [next]);
+
+  // Reset highlight when slide changes
+  useEffect(() => {
+    setHighlightIdx(0);
+  }, [current]);
+
+  // Cycle highlighted words every 1.8s
+  useEffect(() => {
+    const t = setInterval(() => setHighlightIdx((i) => i + 1), 1800);
+    return () => clearInterval(t);
+  }, [current]);
 
   const s = slides[current];
 
@@ -271,7 +303,19 @@ export default function Hero() {
                 {s.title}
               </p>
               <h1 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white leading-tight">
-                {s.subtitle}
+                {s.subtitleStart}{" "}
+                <span
+                  className="inline-block align-bottom overflow-hidden"
+                  style={{ height: "1.15em" }}
+                >
+                  <span
+                    key={`hl-${current}-${highlightIdx}`}
+                    className="block marquee-word"
+                    style={{ color: s.accentColor }}
+                  >
+                    {s.highlights[highlightIdx % s.highlights.length]}
+                  </span>
+                </span>
               </h1>
             </div>
 
@@ -498,6 +542,13 @@ export default function Hero() {
         @keyframes heroFadeIn {
           from { opacity: 0; transform: translateY(14px); }
           to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes marqueeWordIn {
+          from { opacity: 0; transform: translateY(110%); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .marquee-word {
+          animation: marqueeWordIn 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both;
         }
         .overflow-x-auto::-webkit-scrollbar { display: none; }
       `}</style>
