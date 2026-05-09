@@ -255,15 +255,28 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-3 xl:px-4 flex items-center justify-between h-14 xl:h-16 gap-2">
 
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 shrink-0 min-w-0 group" data-testid="link-logo">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#1a237e] to-[#1565c0] flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow shrink-0">
-            <span className="text-white text-xs font-black">KT</span>
+        <a href="/" className="flex items-center gap-2.5 shrink-0 min-w-0 group" data-testid="link-logo">
+          {/* KT logomark */}
+          <div className="relative w-9 h-9 shrink-0">
+            {/* Outer ring */}
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#1a237e] via-[#1565c0] to-[#0288d1] shadow-md group-hover:shadow-[0_0_12px_rgba(21,101,192,0.5)] transition-shadow duration-300" />
+            {/* Inner shine */}
+            <div className="absolute inset-[1.5px] rounded-[10px] bg-gradient-to-b from-white/20 to-transparent" />
+            {/* KT text */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="13" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="900" fill="white" letterSpacing="-0.5">KT</text>
+              </svg>
+            </div>
+            {/* Bottom-right accent dot */}
+            <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#00e676] to-[#00c853] border-2 border-white shadow-sm" />
           </div>
+
           <div className="flex flex-col leading-tight min-w-0">
-            <span className="text-sm sm:text-base xl:text-[17px] font-bold text-[#1a237e] whitespace-nowrap">
+            <span className="text-sm sm:text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
               Kharkan Technology
             </span>
-            <span className="hidden sm:block text-[8px] xl:text-[9px] text-gray-400 tracking-wide whitespace-nowrap">
+            <span className="hidden sm:block text-[8px] xl:text-[9px] font-semibold text-emerald-500 tracking-wide whitespace-nowrap">
               Your Web Hosting, Our Responsibility.
             </span>
           </div>
@@ -324,9 +337,13 @@ export default function Header() {
         <div className="hidden xl:flex items-center gap-2 shrink-0">
           <a
             href="#"
-            className="text-[13px] font-medium text-gray-600 hover:text-[#1565c0] transition-colors px-3 py-2 rounded-lg hover:bg-blue-50 whitespace-nowrap"
+            className="flex items-center gap-1.5 text-[13px] font-semibold text-[#1a237e] border border-[#1a237e]/20 bg-blue-50 hover:bg-blue-100 hover:border-[#1a237e]/40 transition-all px-3.5 py-1.5 rounded-xl whitespace-nowrap shadow-sm"
             data-testid="link-my-account"
           >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round"/>
+              <path d="M4 20c0-3.314 3.582-6 8-6s8 2.686 8 6" stroke="#1a237e" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
             My Account
           </a>
           <a
@@ -408,9 +425,13 @@ export default function Header() {
             <div className="border-t border-gray-100 pt-3 mt-2 space-y-2">
               <a
                 href="#"
-                className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:text-[#1565c0] hover:bg-blue-50 rounded-xl transition-colors"
+                className="flex items-center gap-2 px-3 py-2.5 text-sm font-semibold text-[#1a237e] bg-blue-50 border border-[#1a237e]/20 rounded-xl hover:bg-blue-100 transition-colors"
                 data-testid="link-mobile-my-account"
               >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="8" r="4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M4 20c0-3.314 3.582-6 8-6s8 2.686 8 6" stroke="#1a237e" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
                 My Account
               </a>
               <a
