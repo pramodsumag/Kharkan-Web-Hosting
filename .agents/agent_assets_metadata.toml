@@ -12,3 +12,9 @@ id = "eoXLunRRvWBW3kbXC56sn"
 uri = "file://kharkan-technology.zip"
 type = "unspecified"
 title = "Kharkan Technology — Full Source Code"
+
+[[outputs]]
+id = "POoeS0pFPdzNpIkwsUjai"
+uri = "file://public_html.zip"
+type = "unspecified"
+title = "public_html.zip — Kharkan Technology (463 KB)"
