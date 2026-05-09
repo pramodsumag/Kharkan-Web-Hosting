@@ -8,7 +8,7 @@ import MoneyBack from "@/components/MoneyBack";
 import DomainSearch from "@/components/DomainSearch";
 import Features from "@/components/Features";
 import ComparisonTable from "@/components/ComparisonTable";
-import WhyMilesWeb from "@/components/WhyMilesWeb";
+import WhyKharkanTechnology from "@/components/WhyKharkanTechnology";
 import CustomerStories from "@/components/CustomerStories";
 import RatingSection from "@/components/RatingSection";
 import TrustSection from "@/components/TrustSection";
@@ -29,7 +29,7 @@ export default function Home() {
       <DomainSearch />
       <Features />
       <ComparisonTable />
-      <WhyMilesWeb />
+      <WhyKharkanTechnology />
       <CustomerStories />
       <RatingSection />
       <TrustSection />
