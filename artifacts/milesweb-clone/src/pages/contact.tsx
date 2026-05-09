@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle2, Mail, Phone, MapPin, Clock, Send, Loader2 } from "lucide-react";
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
@@ -43,6 +44,56 @@ const contactInfo = [
 ];
 
 type FormState = "idle" | "loading" | "success" | "error";
+
+const contactJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Kharkan Technology",
+    "url": "https://kharkantechnology.in/contact",
+    "description": "Contact Kharkan Technology's support team 24/7 via phone, email or live chat. Head office in Pune, Maharashtra. Response within 2–4 hours.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Kharkan Technology",
+      "url": "https://kharkantechnology.in",
+      "telephone": "+91-12345-67890",
+      "email": "support@kharkantechnology.in",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "402 Tech Park, Baner Road",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411045",
+        "addressCountry": "IN",
+      },
+      "contactPoint": [
+        { "@type": "ContactPoint", "telephone": "+91-12345-67890", "contactType": "customer support", "availableLanguage": ["English", "Hindi"], "hoursAvailable": "Mo-Sa 09:00-21:00" },
+        { "@type": "ContactPoint", "email": "support@kharkantechnology.in", "contactType": "technical support", "availableLanguage": ["English", "Hindi"] },
+        { "@type": "ContactPoint", "email": "sales@kharkantechnology.in", "contactType": "sales", "availableLanguage": ["English", "Hindi"] },
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kharkantechnology.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://kharkantechnology.in/contact" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How quickly do you respond?", "acceptedAnswer": { "@type": "Answer", "text": "Live chat replies in under 2 minutes. Email responses within 2–4 hours. Phone support is immediate during business hours." } },
+      { "@type": "Question", "name": "Do you offer phone support?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Call us at +91 12345 67890. Our support team is available 9AM–9PM IST, Mon–Sat." } },
+      { "@type": "Question", "name": "Can I get a pre-sales consultation?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Our sales experts will help you choose the right plan for your specific business needs — no pressure, just genuine advice." } },
+      { "@type": "Question", "name": "What languages do you support?", "acceptedAnswer": { "@type": "Answer", "text": "We provide support in English and Hindi. Regional language support may be arranged for large enterprise accounts." } },
+      { "@type": "Question", "name": "How do I raise a billing dispute?", "acceptedAnswer": { "@type": "Answer", "text": "Email billing@kharkantechnology.in or use the contact form with the 'Billing & Payments' department selected. We resolve billing issues within 24 hours." } },
+      { "@type": "Question", "name": "Do you assist with website migration?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer free cPanel-to-cPanel migration for new customers. Our team handles the entire move with zero downtime." } },
+    ],
+  },
+];
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -89,6 +140,13 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Contact Us — 24/7 Support | Kharkan Technology"
+        description="Get in touch with Kharkan Technology's expert support team anytime. Call +91 12345 67890, email support@kharkantechnology.in, or use live chat. Head office in Pune, India."
+        keywords="contact Kharkan Technology, hosting support India, web hosting help, Pune hosting company contact, 24/7 hosting support"
+        canonical="/contact"
+        jsonLd={contactJsonLd}
+      />
       <TopBar />
       <Header />
 

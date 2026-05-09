@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -84,9 +85,53 @@ const stats = [
   { val: "10L+", label: "Websites" },
 ];
 
+const aboutJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Kharkan Technology",
+    "url": "https://kharkantechnology.in/about",
+    "description": "Learn about Kharkan Technology — India's trusted web hosting company founded in 2012 in Pune. Powering 10 lakh+ websites across 190+ countries with 500+ employees.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Kharkan Technology",
+      "foundingDate": "2012",
+      "foundingLocation": "Pune, Maharashtra, India",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 500 },
+      "areaServed": { "@type": "Place", "name": "Worldwide" },
+      "knowsAbout": ["Web Hosting", "Domain Registration", "Cloud Hosting", "WordPress Hosting", "VPS Hosting"],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kharkantechnology.in/" },
+      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://kharkantechnology.in/about" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Kharkan Technology Leadership Team",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "Person", "name": "Rajiv Kharkan", "jobTitle": "Founder & CEO", "worksFor": { "@type": "Organization", "name": "Kharkan Technology" } } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "Person", "name": "Priya Sharma", "jobTitle": "Co-Founder & CTO", "worksFor": { "@type": "Organization", "name": "Kharkan Technology" } } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "Person", "name": "Ankit Mehta", "jobTitle": "VP of Customer Success", "worksFor": { "@type": "Organization", "name": "Kharkan Technology" } } },
+    ],
+  },
+];
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="About Us — India's Trusted Web Hosting Company Since 2012"
+        description="Kharkan Technology was founded in Pune in 2012 with a mission to make world-class web hosting affordable for every Indian business. Today we power 10 lakh+ websites across 190+ countries."
+        keywords="about Kharkan Technology, Indian hosting company, web hosting company India, Pune hosting company, trusted web hosting India"
+        canonical="/about"
+        jsonLd={aboutJsonLd}
+      />
       <TopBar />
       <Header />
 
