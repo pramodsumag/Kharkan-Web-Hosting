@@ -6,6 +6,9 @@ import {
   Mail, AtSign, RefreshCw, Headphones, BookOpen,
   MessageCircle, Phone, Info, UserSquare, Award, Rss,
   ArrowRight, Sparkles, Star,
+  Search, FileText, Settings, MapPin, Link2,
+  Palette, Layers, Image, Video, PenTool,
+  TrendingUp, Share2, MousePointer, BarChart2, Send,
 } from "lucide-react";
 
 /* ─────────────────────────── types ─────────────────────────── */
@@ -59,6 +62,30 @@ const aboutItems: NavItem[] = [
   { icon: UserSquare,  label: "Our Team",       desc: "Meet the leadership behind us",  href: "/about#team",  iconBg: "from-indigo-500 to-indigo-600" },
   { icon: Award,       label: "Careers",        desc: "Join our 500-person strong team", href: "#",           iconBg: "from-amber-500 to-orange-500" },
   { icon: Rss,         label: "Blog",           desc: "Hosting tips & company news",    href: "#",            iconBg: "from-green-500 to-green-600" },
+];
+
+const seoItems: NavItem[] = [
+  { icon: Search,    label: "SEO Audit",          desc: "Full website health & ranking analysis",  href: "/contact", badge: "Popular",    iconBg: "from-orange-500 to-red-500" },
+  { icon: FileText,  label: "On-Page SEO",        desc: "Keywords, meta tags & content optimisation", href: "/contact",              iconBg: "from-amber-500 to-orange-500" },
+  { icon: Settings,  label: "Technical SEO",      desc: "Speed, schema markup & crawlability",    href: "/contact",                iconBg: "from-slate-500 to-gray-600" },
+  { icon: MapPin,    label: "Local SEO",          desc: "Google My Business & local citations",   href: "/contact", badge: "New",        iconBg: "from-green-500 to-emerald-600" },
+  { icon: Link2,     label: "Link Building",      desc: "High-authority backlinks & DA boost",    href: "/contact",                iconBg: "from-purple-500 to-indigo-600" },
+];
+
+const designItems: NavItem[] = [
+  { icon: LayoutTemplate, label: "Web Design",       desc: "Custom responsive website design",       href: "/contact", badge: "Popular",    iconBg: "from-blue-500 to-cyan-500" },
+  { icon: Palette,        label: "Logo & Branding",  desc: "Professional logo & brand identity kit", href: "/contact",                    iconBg: "from-pink-500 to-rose-500" },
+  { icon: Layers,         label: "UI/UX Design",     desc: "User-centred interface & experience",    href: "/contact", badge: "New",        iconBg: "from-violet-500 to-purple-600" },
+  { icon: Image,          label: "Social Graphics",  desc: "Branded creatives for all platforms",    href: "/contact",                    iconBg: "from-teal-500 to-cyan-600" },
+  { icon: Video,          label: "Motion & Video",   desc: "Animated ads, reels & brand videos",     href: "/contact",                    iconBg: "from-red-500 to-orange-500" },
+];
+
+const marketingItems: NavItem[] = [
+  { icon: MousePointer,  label: "Google Ads / PPC",       desc: "ROI-focused search & display campaigns",  href: "/contact", badge: "Popular",  iconBg: "from-blue-600 to-blue-500" },
+  { icon: Share2,        label: "Social Media Marketing", desc: "Facebook, Instagram, LinkedIn growth",     href: "/contact",                  iconBg: "from-pink-600 to-purple-600" },
+  { icon: PenTool,       label: "Content Marketing",      desc: "SEO blogs, articles & copywriting",       href: "/contact", badge: "New",      iconBg: "from-emerald-500 to-teal-600" },
+  { icon: Send,          label: "Email Marketing",        desc: "Campaigns, drip sequences & automation",  href: "/contact",                  iconBg: "from-amber-500 to-yellow-500" },
+  { icon: BarChart2,     label: "Analytics & Reporting",  desc: "GA4 dashboards & monthly ROI reports",    href: "/contact",                  iconBg: "from-slate-600 to-gray-700" },
 ];
 
 /* ─────────────── badge component ─────────────── */
@@ -200,6 +227,85 @@ function WordPressMegaMenu() {
   );
 }
 
+/* ────────────── SEO & Design mega menu ────────────── */
+function SeoDesignMegaMenu() {
+  return (
+    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[860px] bg-white rounded-2xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.18)] border border-gray-100 z-50 overflow-hidden">
+      <div className="h-1 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 w-full" />
+      <div className="flex">
+        {/* SEO column */}
+        <div className="flex-1 p-4 border-r border-gray-100">
+          <div className="flex items-center gap-2 mb-3 px-1">
+            <div className="w-5 h-5 rounded-md bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
+              <Search size={10} className="text-white" />
+            </div>
+            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">SEO Services</span>
+          </div>
+          <div className="space-y-0.5">
+            {seoItems.map((item) => <MenuRow key={item.label} item={item} />)}
+          </div>
+        </div>
+        {/* Design column */}
+        <div className="flex-1 p-4 border-r border-gray-100">
+          <div className="flex items-center gap-2 mb-3 px-1">
+            <div className="w-5 h-5 rounded-md bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
+              <Palette size={10} className="text-white" />
+            </div>
+            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Design Services</span>
+          </div>
+          <div className="space-y-0.5">
+            {designItems.map((item) => <MenuRow key={item.label} item={item} />)}
+          </div>
+        </div>
+        {/* Marketing column */}
+        <div className="flex-1 p-4 border-r border-gray-100">
+          <div className="flex items-center gap-2 mb-3 px-1">
+            <div className="w-5 h-5 rounded-md bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+              <TrendingUp size={10} className="text-white" />
+            </div>
+            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Marketing</span>
+          </div>
+          <div className="space-y-0.5">
+            {marketingItems.map((item) => <MenuRow key={item.label} item={item} />)}
+          </div>
+        </div>
+        {/* Right promo panel */}
+        <div className="w-[190px] bg-gradient-to-br from-orange-500 via-pink-600 to-purple-700 p-5 flex flex-col justify-between shrink-0">
+          <div>
+            <div className="flex items-center gap-1.5 mb-3">
+              <Sparkles size={13} className="text-yellow-300" />
+              <span className="text-[10px] font-bold text-pink-200 uppercase tracking-widest">Free Consultation</span>
+            </div>
+            <div className="text-white text-sm font-bold leading-tight mb-2">Grow your business online</div>
+            <div className="text-pink-200 text-[11px] leading-relaxed mb-4">SEO + Design + Marketing — all under one roof at Kharkan Technology.</div>
+            <ul className="space-y-1.5">
+              {["Free SEO Audit", "30-min Strategy Call", "No commitment"].map((t) => (
+                <li key={t} className="flex items-center gap-1.5 text-[11px] text-pink-100">
+                  <span className="w-1.5 h-1.5 rounded-full bg-yellow-300 shrink-0" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <a
+            href="/contact"
+            className="mt-4 w-full bg-white text-purple-700 text-[12px] font-bold py-2.5 rounded-xl text-center hover:bg-purple-50 transition-colors flex items-center justify-center gap-1.5"
+          >
+            Get Free Audit <ArrowRight size={12} />
+          </a>
+        </div>
+      </div>
+      {/* Bottom strip */}
+      <div className="border-t border-gray-100 bg-gray-50 px-5 py-2.5 flex items-center justify-between">
+        <span className="text-[11px] text-gray-400">Trusted by 10,000+ businesses across India</span>
+        <a href="/contact" className="inline-flex items-center gap-1 text-[11px] font-semibold text-purple-600 hover:text-purple-800 transition-colors">
+          View all services <ArrowRight size={10} />
+        </a>
+      </div>
+    </div>
+  );
+}
+
 /* ────────────── standard drop menu ────────────── */
 function StandardMenu({ items, accentFrom, accentTo }: { items: NavItem[]; accentFrom: string; accentTo: string }) {
   return (
@@ -213,7 +319,7 @@ function StandardMenu({ items, accentFrom, accentTo }: { items: NavItem[]; accen
 }
 
 /* ─────────────────── nav config ─────────────────── */
-type MenuType = "hosting" | "wordpress" | "standard" | "link";
+type MenuType = "hosting" | "wordpress" | "standard" | "seodesign" | "link";
 interface NavConfig {
   label: string;
   type: MenuType;
@@ -226,10 +332,11 @@ interface NavConfig {
 const navConfig: NavConfig[] = [
   { label: "Hosting",         type: "hosting" },
   { label: "WordPress",       type: "wordpress" },
-  { label: "VPS & Dedicated", type: "standard", items: vpsItems,    accentFrom: "from-orange-500", accentTo: "to-red-500" },
-  { label: "Domain & Email",  type: "standard", items: domainItems, accentFrom: "from-blue-400",   accentTo: "to-teal-500" },
-  { label: "Support",         type: "standard", items: supportItems, accentFrom: "from-green-500", accentTo: "to-cyan-500" },
-  { label: "About Us",        type: "standard", items: aboutItems,   accentFrom: "from-indigo-500", accentTo: "to-purple-500" },
+  { label: "VPS & Dedicated", type: "standard",   items: vpsItems,    accentFrom: "from-orange-500", accentTo: "to-red-500" },
+  { label: "Domain & Email",  type: "standard",   items: domainItems, accentFrom: "from-blue-400",   accentTo: "to-teal-500" },
+  { label: "SEO & Design",    type: "seodesign" },
+  { label: "Support",         type: "standard",   items: supportItems, accentFrom: "from-green-500", accentTo: "to-cyan-500" },
+  { label: "About Us",        type: "standard",   items: aboutItems,   accentFrom: "from-indigo-500", accentTo: "to-purple-500" },
 ];
 
 /* ─────────────────── header ─────────────────── */
@@ -314,6 +421,7 @@ export default function Header() {
                 >
                   {nav.type === "hosting"   && <HostingMegaMenu />}
                   {nav.type === "wordpress" && <WordPressMegaMenu />}
+                  {nav.type === "seodesign" && <SeoDesignMegaMenu />}
                   {nav.type === "standard"  && nav.items && (
                     <StandardMenu items={nav.items} accentFrom={nav.accentFrom!} accentTo={nav.accentTo!} />
                   )}
@@ -392,7 +500,7 @@ export default function Header() {
                     </button>
                     {mobileExpanded === nav.label && (
                       <div className="ml-3 mt-1 mb-1 border-l-2 border-blue-100 pl-3 space-y-0.5">
-                        {(nav.type === "hosting" ? hostingItems : nav.type === "wordpress" ? wordpressItems : nav.items ?? []).map((item) => (
+                        {(nav.type === "hosting" ? hostingItems : nav.type === "wordpress" ? wordpressItems : nav.type === "seodesign" ? [...seoItems, ...designItems, ...marketingItems] : nav.items ?? []).map((item) => (
                           <a
                             key={item.label}
                             href={item.href}
