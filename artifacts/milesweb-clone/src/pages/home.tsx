@@ -7,6 +7,7 @@ import HostingPlans from "@/components/HostingPlans";
 import MoneyBack from "@/components/MoneyBack";
 import DomainSearch from "@/components/DomainSearch";
 import Features from "@/components/Features";
+import SpeedSecuritySuccess from "@/components/SpeedSecuritySuccess";
 import ComparisonTable from "@/components/ComparisonTable";
 import WhyKharkanTechnology from "@/components/WhyKharkanTechnology";
 import CustomerStories from "@/components/CustomerStories";
@@ -112,6 +113,7 @@ export default function Home() {
       <HostingPlans />
       <MoneyBack />
       <Features />
+      <SpeedSecuritySuccess />
       <ComparisonTable />
       <WhyKharkanTechnology />
       <CustomerStories />
