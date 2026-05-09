@@ -363,12 +363,6 @@ export default function Header() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2.5 shrink-0 min-w-0 group" data-testid="link-logo">
           {/* KT logomark */}
-          <img
-            src="/kt-logo.png"
-            alt="Kharkan Technology Logo"
-            className="h-9 w-auto shrink-0 group-hover:scale-105 transition-transform duration-200"
-          />
-
           <div className="flex flex-col leading-tight min-w-0">
             <span className="text-sm sm:text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
               Kharkan Technology
