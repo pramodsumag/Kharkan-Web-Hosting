@@ -3,7 +3,6 @@ import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-import RenewalSection from "@/components/RenewalSection";
 import HostingPlans from "@/components/HostingPlans";
 import MoneyBack from "@/components/MoneyBack";
 import DomainSearch from "@/components/DomainSearch";
@@ -110,7 +109,6 @@ export default function Home() {
       <Hero />
       <DomainSearch />
       <TrustBar />
-      <RenewalSection />
       <HostingPlans />
       <MoneyBack />
       <Features />

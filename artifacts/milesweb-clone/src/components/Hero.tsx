@@ -74,13 +74,6 @@ export default function Hero() {
               <span className="text-5xl sm:text-6xl font-extrabold text-[#1a237e]">39.00</span>
               <span className="text-gray-500 text-base mb-1">/mo</span>
             </div>
-            <a
-              href="#plans"
-              className="text-xs sm:text-sm text-[#1565c0] font-medium underline decoration-dotted hover:text-[#1251a3]"
-              data-testid="link-renewal-guarantee"
-            >
-              Same price at renewal – Guaranteed.
-            </a>
           </div>
 
           {/* CTAs */}
