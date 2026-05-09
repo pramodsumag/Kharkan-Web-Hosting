@@ -6,3 +6,9 @@ id = "65xKOdeqh1sRLSnIkXcQc"
 uri = "file://kharkan-technology-website.zip"
 type = "unspecified"
 title = "Kharkan Technology — Standalone Website (HTML/CSS/JS)"
+
+[[outputs]]
+id = "eoXLunRRvWBW3kbXC56sn"
+uri = "file://kharkan-technology.zip"
+type = "unspecified"
+title = "Kharkan Technology — Full Source Code"
