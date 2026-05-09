@@ -207,7 +207,9 @@ export default function HostingPlans() {
               </div>
 
               <a
-                href="#"
+                href="https://kharkan.com/dash/index.php"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block text-center font-bold text-sm py-3 px-6 rounded-lg mt-4 mb-6 transition-colors ${
                   plan.popular
                     ? "bg-[#1565c0] text-white hover:bg-[#1251a3]"
