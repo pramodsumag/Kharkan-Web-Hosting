@@ -373,7 +373,7 @@ export default function Hero() {
             style={{ animation: "heroFadeIn 0.65s ease both" }}
           >
             <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm">
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-[440px] overflow-hidden">
                 <img
                   src={s.imgUrl}
                   alt={s.title}
