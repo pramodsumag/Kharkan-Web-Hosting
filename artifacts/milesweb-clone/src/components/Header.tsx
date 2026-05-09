@@ -228,7 +228,6 @@ const navConfig: NavConfig[] = [
   { label: "WordPress",       type: "wordpress" },
   { label: "VPS & Dedicated", type: "standard", items: vpsItems,    accentFrom: "from-orange-500", accentTo: "to-red-500" },
   { label: "Domain & Email",  type: "standard", items: domainItems, accentFrom: "from-blue-400",   accentTo: "to-teal-500" },
-  { label: "Pricing",         type: "link",     href: "#plans" },
   { label: "Support",         type: "standard", items: supportItems, accentFrom: "from-green-500", accentTo: "to-cyan-500" },
   { label: "About Us",        type: "standard", items: aboutItems,   accentFrom: "from-indigo-500", accentTo: "to-purple-500" },
 ];
