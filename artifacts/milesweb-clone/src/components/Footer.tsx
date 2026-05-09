@@ -70,6 +70,70 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Payment Methods */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-blue-400 font-medium whitespace-nowrap">🔒 Secure Payments via</span>
+          </div>
+          <div className="flex items-center gap-2.5 flex-wrap justify-center">
+            {/* VISA */}
+            <div className="h-8 px-3 rounded-md flex items-center justify-center bg-[#1a1f71] border border-white/10">
+              <svg viewBox="0 0 72 24" width="44" height="16" xmlns="http://www.w3.org/2000/svg" aria-label="Visa">
+                <text x="0" y="19" fontFamily="Arial, sans-serif" fontSize="22" fontWeight="bold" fontStyle="italic" fill="white" letterSpacing="1">VISA</text>
+              </svg>
+            </div>
+
+            {/* PhonePe */}
+            <div className="h-8 px-3 rounded-md flex items-center gap-1.5 bg-[#5f259f] border border-white/10">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="PhonePe logo">
+                <circle cx="12" cy="12" r="12" fill="#5f259f"/>
+                <path d="M7 8.5C7 7.12 8.12 6 9.5 6H14.5C16.43 6 18 7.57 18 9.5C18 11.43 16.43 13 14.5 13H11V17.5H9V8.5ZM11 11H14.5C15.33 11 16 10.33 16 9.5C16 8.67 15.33 8 14.5 8H11V11Z" fill="white"/>
+              </svg>
+              <span className="text-white text-[11px] font-bold">PhonePe</span>
+            </div>
+
+            {/* Paytm */}
+            <div className="h-8 px-3 rounded-md flex items-center gap-1 bg-[#002970] border border-white/10">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Paytm logo">
+                <rect width="24" height="24" rx="4" fill="#00BAF2"/>
+                <text x="4" y="17" fontFamily="Arial" fontSize="10" fontWeight="bold" fill="#002970">P</text>
+              </svg>
+              <span className="text-[11px] font-bold">
+                <span className="text-[#00BAF2]">Pay</span><span className="text-white">tm</span>
+              </span>
+            </div>
+
+            {/* Google Pay */}
+            <div className="h-8 px-3 rounded-md flex items-center gap-1.5 bg-white border border-white/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Google Pay logo">
+                <path d="M11.99 10.93v2.87h4.47c-.19 1.03-.77 1.9-1.63 2.48l2.63 2.04c1.53-1.41 2.41-3.49 2.41-5.97 0-.58-.05-1.14-.14-1.68L11.99 10.93z" fill="#4285F4"/>
+                <path d="M5.84 14.3a6.98 6.98 0 0 1 0-4.6L3.2 7.66a10.02 10.02 0 0 0 0 8.68l2.64-2.04z" fill="#FBBC05"/>
+                <path d="M11.99 5.5c1.78 0 3.37.61 4.63 1.82l2.45-2.45C17.07 2.92 14.73 2 11.99 2 8.04 2 4.61 4.18 2.8 7.44l2.64 2.04c.82-2.44 3.11-4 6.55-4z" fill="#EA4335"/>
+                <path d="M5.84 14.3l-2.64 2.04C4.61 19.82 8.04 22 11.99 22c2.74 0 5.07-.9 6.77-2.45l-2.63-2.04c-.83.56-1.9.89-3.14.89-2.55 0-4.72-1.72-5.15-4.1z" fill="#34A853"/>
+              </svg>
+              <span className="text-[11px] font-bold text-gray-800">GPay</span>
+            </div>
+
+            {/* MasterCard */}
+            <div className="h-8 px-3 rounded-md flex items-center gap-1.5 bg-[#252525] border border-white/10">
+              <svg width="28" height="18" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard logo">
+                <circle cx="14" cy="12" r="10" fill="#EB001B"/>
+                <circle cx="24" cy="12" r="10" fill="#F79E1B"/>
+                <path d="M19 5.27a10 10 0 0 1 0 13.46A10 10 0 0 1 19 5.27z" fill="#FF5F00"/>
+              </svg>
+            </div>
+
+            {/* UPI */}
+            <div className="h-8 px-3 rounded-md flex items-center justify-center bg-white border border-white/20">
+              <svg width="38" height="16" viewBox="0 0 80 30" xmlns="http://www.w3.org/2000/svg" aria-label="UPI">
+                <text x="0" y="22" fontFamily="Arial, sans-serif" fontSize="20" fontWeight="900" fill="#6B2D8B">UPI</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2 items-center sm:flex-row sm:justify-between">
