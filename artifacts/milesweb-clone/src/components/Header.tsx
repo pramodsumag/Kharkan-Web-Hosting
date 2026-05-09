@@ -428,7 +428,9 @@ export default function Header() {
         {/* Right CTA — desktop */}
         <div className="hidden xl:flex items-center gap-2 shrink-0">
           <a
-            href="#"
+            href="https://kharkan.com/dash/index.php?rp=/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-[13px] font-semibold text-[#1a237e] border border-[#1a237e]/20 bg-blue-50 hover:bg-blue-100 hover:border-[#1a237e]/40 transition-all px-3.5 py-1.5 rounded-xl whitespace-nowrap shadow-sm"
             data-testid="link-my-account"
           >
@@ -516,7 +518,9 @@ export default function Header() {
 
             <div className="border-t border-gray-100 pt-3 mt-2 space-y-2">
               <a
-                href="#"
+                href="https://kharkan.com/dash/index.php?rp=/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 px-3 py-2.5 text-sm font-semibold text-[#1a237e] bg-blue-50 border border-[#1a237e]/20 rounded-xl hover:bg-blue-100 transition-colors"
                 data-testid="link-mobile-my-account"
               >
