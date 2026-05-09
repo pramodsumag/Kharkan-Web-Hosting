@@ -33,7 +33,9 @@ export default function TopBar() {
           <span className="text-blue-300">S</span>
         </div>
         <a
-          href="#plans"
+          href="https://kharkan.com/dash/index.php"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-[#ffeb3b] text-[#1a237e] font-bold text-xs px-3 py-1 rounded-full hover:bg-yellow-300 transition-colors whitespace-nowrap"
           data-testid="link-view-plans"
         >

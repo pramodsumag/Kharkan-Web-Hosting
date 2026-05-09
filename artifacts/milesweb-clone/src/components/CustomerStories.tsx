@@ -110,7 +110,9 @@ export default function CustomerStories() {
 
         <div className="text-center mt-10">
           <a
-            href="#plans"
+            href="https://kharkan.com/dash/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#1565c0] hover:bg-[#1251a3] text-white font-bold px-10 py-3.5 rounded-xl text-base transition-colors shadow-md"
           >
             Start Your Success Story →

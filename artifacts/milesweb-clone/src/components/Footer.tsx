@@ -16,7 +16,9 @@ export default function Footer() {
             <p className="text-blue-200 text-sm">Get started today with 80% off + free domain. Cancel anytime.</p>
           </div>
           <a
-            href="#plans"
+            href="https://kharkan.com/dash/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-[#1565c0] font-bold text-sm px-7 py-3 rounded-lg hover:bg-blue-50 transition-colors shrink-0 w-full sm:w-auto text-center"
             data-testid="button-footer-cta"
           >

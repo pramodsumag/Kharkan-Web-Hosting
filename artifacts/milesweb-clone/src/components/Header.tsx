@@ -144,7 +144,7 @@ function HostingMegaMenu() {
             {hostingItems.map((item) => <MenuRow key={item.label} item={item} />)}
           </div>
           <div className="mt-3 pt-3 border-t border-gray-100 px-1">
-            <a href="#plans" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
+            <a href="https://kharkan.com/dash/index.php" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
               <span>View all hosting plans</span>
               <ArrowRight size={12} />
             </a>
@@ -170,7 +170,9 @@ function HostingMegaMenu() {
             </div>
           </div>
           <a
-            href="#plans"
+            href="https://kharkan.com/dash/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 w-full bg-white text-[#1565c0] text-[12px] font-bold py-2.5 rounded-xl text-center hover:bg-blue-50 transition-colors flex items-center justify-center gap-1.5"
           >
             Get Started <ArrowRight size={12} />
@@ -196,7 +198,7 @@ function WordPressMegaMenu() {
             {wordpressItems.map((item) => <MenuRow key={item.label} item={item} />)}
           </div>
           <div className="mt-3 pt-3 border-t border-gray-100 px-1">
-            <a href="#plans" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
+            <a href="https://kharkan.com/dash/index.php" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
               <span>Explore WordPress plans</span>
               <ArrowRight size={12} />
             </a>
@@ -216,7 +218,9 @@ function WordPressMegaMenu() {
             </div>
           </div>
           <a
-            href="#plans"
+            href="https://kharkan.com/dash/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 w-full bg-white text-purple-700 text-[12px] font-bold py-2.5 rounded-xl text-center hover:bg-purple-50 transition-colors flex items-center justify-center gap-1.5"
           >
             Try Now <ArrowRight size={12} />
@@ -441,7 +445,9 @@ export default function Header() {
             My Account
           </a>
           <a
-            href="#plans"
+            href="https://kharkan.com/dash/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#1a237e] to-[#1565c0] text-white text-[13px] font-semibold px-5 py-2 rounded-xl hover:from-[#1251a3] hover:to-[#0d47a1] transition-all shadow-sm hover:shadow-md whitespace-nowrap flex items-center gap-1.5"
             data-testid="button-get-started"
           >
@@ -452,7 +458,9 @@ export default function Header() {
         {/* Mobile: condensed CTA + hamburger */}
         <div className="flex xl:hidden items-center gap-2 shrink-0">
           <a
-            href="#plans"
+            href="https://kharkan.com/dash/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1 bg-gradient-to-r from-[#1a237e] to-[#1565c0] text-white text-xs font-semibold px-3.5 py-2 rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
             data-testid="button-tablet-get-started"
           >
@@ -531,7 +539,9 @@ export default function Header() {
                 My Account
               </a>
               <a
-                href="#plans"
+                href="https://kharkan.com/dash/index.php"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#1a237e] to-[#1565c0] text-white text-sm font-semibold px-5 py-3 rounded-xl hover:opacity-90 transition-opacity"
                 data-testid="button-mobile-get-started"
                 onClick={() => setMobileOpen(false)}
