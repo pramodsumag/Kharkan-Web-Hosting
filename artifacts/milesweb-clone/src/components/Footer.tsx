@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <div className="mb-3">
               <div className="text-xl font-extrabold text-white">Kharkan Technology</div>
-              <div className="text-xs text-blue-300 mt-0.5">Your Hosting, Our Responsibility.</div>
+              <div className="text-xs text-blue-300 mt-0.5">Your Web Hosting, Our Responsibility.</div>
             </div>
             <p className="text-blue-300 text-xs leading-relaxed mb-4 max-w-xs">
               India's leading web hosting company, serving over 1 million websites since 2012.
