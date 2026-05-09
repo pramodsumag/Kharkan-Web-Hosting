@@ -256,20 +256,11 @@ export default function Header() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2.5 shrink-0 min-w-0 group" data-testid="link-logo">
           {/* KT logomark */}
-          <div className="relative w-9 h-9 shrink-0">
-            {/* Outer ring */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#1a237e] via-[#1565c0] to-[#0288d1] shadow-md group-hover:shadow-[0_0_12px_rgba(21,101,192,0.5)] transition-shadow duration-300" />
-            {/* Inner shine */}
-            <div className="absolute inset-[1.5px] rounded-[10px] bg-gradient-to-b from-white/20 to-transparent" />
-            {/* KT text */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <text x="0" y="13" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="900" fill="white" letterSpacing="-0.5">KT</text>
-              </svg>
-            </div>
-            {/* Bottom-right accent dot */}
-            <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#00e676] to-[#00c853] border-2 border-white shadow-sm" />
-          </div>
+          <img
+            src="/kt-logo.png"
+            alt="Kharkan Technology Logo"
+            className="h-9 w-auto shrink-0 group-hover:scale-105 transition-transform duration-200"
+          />
 
           <div className="flex flex-col leading-tight min-w-0">
             <span className="text-sm sm:text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
