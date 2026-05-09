@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://kharkantechnology.in/</loc>
-    <lastmod>2025-05-09</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://kharkantechnology.in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kharkantechnology.in/"/>
+    <image:image>
+      <image:loc>https://kharkantechnology.in/opengraph.jpg</image:loc>
+      <image:title>Kharkan Technology — Web Hosting from ₹39/mo</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://kharkantechnology.in/about</loc>
-    <lastmod>2025-05-09</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://kharkantechnology.in/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kharkantechnology.in/about"/>
   </url>
 
   <url>
     <loc>https://kharkantechnology.in/contact</loc>
-    <lastmod>2025-05-09</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://kharkantechnology.in/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kharkantechnology.in/contact"/>
   </url>
 
 </urlset>
