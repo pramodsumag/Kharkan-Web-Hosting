@@ -20,7 +20,7 @@ const slides = [
     accentColor: "#93c5fd",
     badgeBg: "bg-blue-400/20 text-blue-100",
     discountBg: "bg-yellow-400 text-yellow-900",
-    imgUrl: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=360&fit=crop&crop=top",
+    imgUrl: "/hosting-hero.webp",
     stats: [{ v: "99.99%", l: "Uptime" }, { v: "1M+", l: "Websites" }, { v: "24/7", l: "Support" }],
   },
   {
