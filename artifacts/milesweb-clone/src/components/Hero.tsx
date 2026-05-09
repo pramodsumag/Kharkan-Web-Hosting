@@ -22,7 +22,7 @@ const slides = [
     accentColor: "#fed7aa",
     badgeBg: "bg-orange-300/20 text-orange-100",
     discountBg: "bg-yellow-400 text-yellow-900",
-    imgUrl: "/hosting-hero.webp",
+    imgUrl: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=360&fit=crop&crop=top",
     stats: [{ v: "99.99%", l: "Uptime" }, { v: "1M+", l: "Websites" }, { v: "24/7", l: "Support" }],
   },
   {
