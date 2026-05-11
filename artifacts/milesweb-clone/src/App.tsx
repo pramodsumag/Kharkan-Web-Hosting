@@ -7,6 +7,8 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import ContactPage from "@/pages/contact";
 import AboutPage from "@/pages/about";
+import ServicePage from "@/pages/ServicePage";
+import { services } from "@/data/services";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +18,9 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/about" component={AboutPage} />
+      {Object.keys(services).map((slug) => (
+        <Route key={slug} path={`/${slug}`} component={ServicePage} />
+      ))}
       <Route component={NotFound} />
     </Switch>
   );

@@ -7,7 +7,7 @@ import {
   MessageCircle, Phone, Info, UserSquare, Award, Rss,
   ArrowRight, Sparkles, Star,
   Search, FileText, Settings, MapPin, Link2,
-  Palette, Layers, Image, Video, PenTool,
+  Palette, Layers, Image, Video, PenTool, Code,
   TrendingUp, Share2, MousePointer, BarChart2, Send,
 } from "lucide-react";
 
@@ -24,30 +24,30 @@ interface NavItem {
 
 /* ────────────────────────── menu data ──────────────────────── */
 const hostingItems: NavItem[] = [
-  { icon: Globe,          label: "Shared Hosting",    desc: "Perfect for new websites & blogs",     href: "#plans",  badge: "Popular",    iconBg: "from-blue-500 to-blue-600" },
-  { icon: LayoutTemplate, label: "WordPress Hosting", desc: "Blazing-fast WP with 1-click install", href: "#plans",  badge: "Best Value", iconBg: "from-purple-500 to-purple-600" },
-  { icon: Briefcase,      label: "Business Hosting",  desc: "For growing businesses & agencies",    href: "#plans",                       iconBg: "from-indigo-500 to-indigo-600" },
-  { icon: Users,          label: "Reseller Hosting",  desc: "Launch your own hosting business",     href: "#plans",                       iconBg: "from-cyan-500 to-cyan-600" },
-  { icon: Cloud,          label: "Cloud Hosting",     desc: "Infinitely scalable cloud power",      href: "#plans",  badge: "New",         iconBg: "from-sky-500 to-sky-600" },
+  { icon: Globe,          label: "Web Hosting",       desc: "Perfect for new websites & blogs",     href: "/web-hosting",       badge: "Popular",    iconBg: "from-blue-500 to-blue-600" },
+  { icon: LayoutTemplate, label: "WordPress Hosting", desc: "Blazing-fast WP with 1-click install", href: "/wordpress-hosting", badge: "Best Value", iconBg: "from-purple-500 to-purple-600" },
+  { icon: Briefcase,      label: "Business Email",    desc: "Professional @yourdomain email",       href: "/business-email",                       iconBg: "from-indigo-500 to-indigo-600" },
+  { icon: Users,          label: "Reseller Hosting",  desc: "Launch your own hosting business",     href: "/reseller-hosting",                     iconBg: "from-cyan-500 to-cyan-600" },
+  { icon: Cloud,          label: "VPS Hosting",       desc: "Full root access, SSD-powered",        href: "/vps-hosting",       badge: "New",        iconBg: "from-sky-500 to-sky-600" },
 ];
 
 const wordpressItems: NavItem[] = [
-  { icon: Shield,         label: "Managed WordPress",   desc: "Auto-updates, backups & staging",     href: "#plans", badge: "Popular",    iconBg: "from-blue-600 to-indigo-600" },
-  { icon: LayoutTemplate, label: "WordPress Hosting",   desc: "LiteSpeed-powered, ultra-affordable", href: "#plans", badge: "Best Value", iconBg: "from-purple-500 to-purple-600" },
-  { icon: ShoppingCart,   label: "WooCommerce Hosting", desc: "Built for high-traffic online stores", href: "#plans",                     iconBg: "from-green-500 to-emerald-600" },
+  { icon: Shield,         label: "Managed WordPress",   desc: "Auto-updates, backups & staging",     href: "/wordpress-hosting", badge: "Popular",    iconBg: "from-blue-600 to-indigo-600" },
+  { icon: LayoutTemplate, label: "WordPress Hosting",   desc: "LiteSpeed-powered, ultra-affordable", href: "/wordpress-hosting", badge: "Best Value", iconBg: "from-purple-500 to-purple-600" },
+  { icon: ShoppingCart,   label: "WooCommerce Hosting", desc: "Built for high-traffic online stores", href: "/wordpress-hosting",                    iconBg: "from-green-500 to-emerald-600" },
 ];
 
 const vpsItems: NavItem[] = [
-  { icon: Server,    label: "VPS Hosting",       desc: "Full root access, SSD-powered",    href: "#", iconBg: "from-orange-500 to-orange-600" },
-  { icon: HardDrive, label: "Dedicated Servers", desc: "Maximum power & isolation",        href: "#", iconBg: "from-red-500 to-red-600" },
-  { icon: Zap,       label: "Cloud VPS",         desc: "Elastic cloud virtual servers",    href: "#", iconBg: "from-yellow-500 to-amber-600" },
+  { icon: Server,    label: "VPS Hosting",       desc: "Full root access, SSD-powered",    href: "/vps-hosting", iconBg: "from-orange-500 to-orange-600" },
+  { icon: HardDrive, label: "Dedicated Servers", desc: "Maximum power & isolation",        href: "/vps-hosting", iconBg: "from-red-500 to-red-600" },
+  { icon: Zap,       label: "Cloud VPS",         desc: "Elastic cloud virtual servers",    href: "/vps-hosting", iconBg: "from-yellow-500 to-amber-600" },
 ];
 
 const domainItems: NavItem[] = [
-  { icon: Globe,     label: "Domain Registration", desc: "Find your perfect .in, .com & more", href: "#", iconBg: "from-blue-500 to-blue-600" },
-  { icon: RefreshCw, label: "Domain Transfer",     desc: "Move your domain, keep your price",  href: "#", iconBg: "from-teal-500 to-teal-600" },
-  { icon: Mail,      label: "Business Email",      desc: "Professional @yourdomain email",      href: "#", iconBg: "from-purple-500 to-purple-600" },
-  { icon: AtSign,    label: "G Suite / Workspace", desc: "Google Workspace at great prices",    href: "#", iconBg: "from-red-400 to-red-500" },
+  { icon: Globe,     label: "Domain Registration", desc: "Find your perfect .in, .com & more", href: "/domain-registration", iconBg: "from-blue-500 to-blue-600" },
+  { icon: RefreshCw, label: "Domain Transfer",     desc: "Move your domain, keep your price",  href: "/domain-registration", iconBg: "from-teal-500 to-teal-600" },
+  { icon: Mail,      label: "Business Email",      desc: "Professional @yourdomain email",     href: "/business-email",      iconBg: "from-purple-500 to-purple-600" },
+  { icon: AtSign,    label: "G Suite / Workspace", desc: "Google Workspace at great prices",   href: "/business-email",      iconBg: "from-red-400 to-red-500" },
 ];
 
 const supportItems: NavItem[] = [
@@ -65,19 +65,20 @@ const aboutItems: NavItem[] = [
 ];
 
 const seoItems: NavItem[] = [
-  { icon: Search,    label: "SEO Audit",          desc: "Full website health & ranking analysis",  href: "/contact", badge: "Popular",    iconBg: "from-orange-500 to-red-500" },
-  { icon: FileText,  label: "On-Page SEO",        desc: "Keywords, meta tags & content optimisation", href: "/contact",              iconBg: "from-amber-500 to-orange-500" },
-  { icon: Settings,  label: "Technical SEO",      desc: "Speed, schema markup & crawlability",    href: "/contact",                iconBg: "from-slate-500 to-gray-600" },
-  { icon: MapPin,    label: "Local SEO",          desc: "Google My Business & local citations",   href: "/contact", badge: "New",        iconBg: "from-green-500 to-emerald-600" },
-  { icon: Link2,     label: "Link Building",      desc: "High-authority backlinks & DA boost",    href: "/contact",                iconBg: "from-purple-500 to-indigo-600" },
+  { icon: Search,    label: "SEO Services",       desc: "Full website health & ranking analysis",     href: "/seo-services", badge: "Popular",   iconBg: "from-orange-500 to-red-500" },
+  { icon: FileText,  label: "On-Page SEO",        desc: "Keywords, meta tags & content optimisation", href: "/seo-services",                     iconBg: "from-amber-500 to-orange-500" },
+  { icon: Settings,  label: "Technical SEO",      desc: "Speed, schema markup & crawlability",        href: "/seo-services",                     iconBg: "from-slate-500 to-gray-600" },
+  { icon: MapPin,    label: "Local SEO",          desc: "Google My Business & local citations",       href: "/seo-services", badge: "New",       iconBg: "from-green-500 to-emerald-600" },
+  { icon: Link2,     label: "Link Building",      desc: "High-authority backlinks & DA boost",        href: "/seo-services",                     iconBg: "from-purple-500 to-indigo-600" },
 ];
 
 const designItems: NavItem[] = [
-  { icon: LayoutTemplate, label: "Web Design",       desc: "Custom responsive website design",       href: "/contact", badge: "Popular",    iconBg: "from-blue-500 to-cyan-500" },
-  { icon: Palette,        label: "Logo & Branding",  desc: "Professional logo & brand identity kit", href: "/contact",                    iconBg: "from-pink-500 to-rose-500" },
-  { icon: Layers,         label: "UI/UX Design",     desc: "User-centred interface & experience",    href: "/contact", badge: "New",        iconBg: "from-violet-500 to-purple-600" },
-  { icon: Image,          label: "Social Graphics",  desc: "Branded creatives for all platforms",    href: "/contact",                    iconBg: "from-teal-500 to-cyan-600" },
-  { icon: Video,          label: "Motion & Video",   desc: "Animated ads, reels & brand videos",     href: "/contact",                    iconBg: "from-red-500 to-orange-500" },
+  { icon: LayoutTemplate, label: "Web Design",       desc: "Custom responsive website design",       href: "/web-design",          badge: "Popular",  iconBg: "from-blue-500 to-cyan-500" },
+  { icon: Code,           label: "Web Development",  desc: "React, Next.js & WordPress development", href: "/web-development",                        iconBg: "from-green-500 to-emerald-600" },
+  { icon: Palette,        label: "Logo & Branding",  desc: "Professional logo & brand identity kit", href: "/web-design",                             iconBg: "from-pink-500 to-rose-500" },
+  { icon: Layers,         label: "Software Dev",     desc: "Custom SaaS, MVP & enterprise apps",     href: "/software-development", badge: "New",     iconBg: "from-violet-500 to-purple-600" },
+  { icon: Image,          label: "Social Graphics",  desc: "Branded creatives for all platforms",    href: "/web-design",                             iconBg: "from-teal-500 to-cyan-600" },
+  { icon: Video,          label: "Motion & Video",   desc: "Animated ads, reels & brand videos",     href: "/web-design",                             iconBg: "from-red-500 to-orange-500" },
 ];
 
 const marketingItems: NavItem[] = [
