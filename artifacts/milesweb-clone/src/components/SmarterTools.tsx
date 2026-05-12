@@ -192,7 +192,7 @@ export default function SmarterTools() {
               </p>
             </div>
             <a
-              href="https://kharkan.com/dash/index.php"
+              href="https://kharkan.com/user/login"
               target="_blank"
               rel="noopener noreferrer"
               className="shrink-0 inline-flex items-center gap-2 bg-white text-[#1a237e] font-bold text-sm px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg whitespace-nowrap"

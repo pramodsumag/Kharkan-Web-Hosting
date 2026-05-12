@@ -129,7 +129,7 @@ export default function ComparisonTable() {
             <div className="p-5" />
             <div className="p-5 text-center border-x border-gray-200">
               <a
-                href="https://kharkan.com/dash/index.php"
+                href="https://kharkan.com/user/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#1565c0] text-white text-sm font-bold px-6 py-2.5 rounded-xl hover:bg-[#1251a3] transition-colors shadow-md"

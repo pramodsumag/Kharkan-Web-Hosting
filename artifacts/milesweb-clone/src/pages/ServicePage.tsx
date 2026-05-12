@@ -29,7 +29,7 @@ const heroIconMap: Record<ServiceData["iconKey"], React.FC<{ size?: number; clas
   mail: Mail, users: Users, code: Code, software: Cpu, search: Search, design: Palette,
 };
 
-const SIGNUP = "https://kharkan.com/dash/index.php";
+const SIGNUP = "https://kharkan.com/user/login";
 
 function buildJsonLd(s: ServiceData) {
   return [

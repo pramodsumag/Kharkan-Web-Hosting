@@ -70,7 +70,7 @@ export default function MoneyBack() {
 
         <div className="text-center mt-10">
           <a
-            href="https://kharkan.com/dash/index.php"
+            href="https://kharkan.com/user/login"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold px-10 py-3.5 rounded-xl text-base transition-colors shadow-md"

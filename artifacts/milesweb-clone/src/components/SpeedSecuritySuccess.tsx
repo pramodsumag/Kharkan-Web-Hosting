@@ -240,7 +240,7 @@ export default function SpeedSecuritySuccess() {
               ))}
             </div>
             <a
-              href="https://kharkan.com/dash/index.php"
+              href="https://kharkan.com/user/login"
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-flex items-center gap-2 bg-gradient-to-r ${p.color} text-white text-sm font-bold px-6 py-2.5 rounded-xl hover:opacity-90 transition-opacity shadow-md whitespace-nowrap`}

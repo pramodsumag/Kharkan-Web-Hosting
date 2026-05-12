@@ -329,7 +329,7 @@ export default function HostingPlans() {
               </div>
 
               <a
-                href="https://kharkan.com/dash/index.php"
+                href="https://kharkan.com/user/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block text-center font-bold text-sm py-3 px-6 rounded-lg mt-4 mb-6 transition-colors ${

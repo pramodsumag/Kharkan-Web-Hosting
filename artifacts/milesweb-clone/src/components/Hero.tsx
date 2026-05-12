@@ -16,7 +16,7 @@ const slides = [
     priceLabel: "/mo",
     discount: "80% OFF",
     cta: "Start Now — ₹29/mo",
-    ctaHref: "https://kharkan.com/dash/index.php",
+    ctaHref: "https://kharkan.com/user/login",
     perks: ["Free SSL Certificate", "Free Domain for 1 Year", "24/7 Expert Support"],
     gradient: "from-[#7c2d00] via-[#c2410c] to-[#f97316]",
     accentColor: "#fed7aa",
@@ -39,7 +39,7 @@ const slides = [
     priceLabel: "/yr",
     discount: ".IN ₹99",
     cta: "Search Your Domain",
-    ctaHref: "https://kharkan.com/dash/index.php",
+    ctaHref: "https://kharkan.com/user/login",
     perks: ["Free DNS Management", "WHOIS Privacy Guard", "Auto-renewal Alerts"],
     gradient: "from-[#042f2e] via-[#0f766e] to-[#14b8a6]",
     accentColor: "#5eead4",
@@ -62,7 +62,7 @@ const slides = [
     priceLabel: "/mo",
     discount: "75% OFF",
     cta: "Get WordPress Hosting",
-    ctaHref: "https://kharkan.com/dash/index.php",
+    ctaHref: "https://kharkan.com/user/login",
     perks: ["1-click WordPress Install", "Free Site Migration", "Automatic Core Updates"],
     gradient: "from-[#1e0a3c] via-[#4c1d95] to-[#7c3aed]",
     accentColor: "#c4b5fd",
@@ -85,7 +85,7 @@ const slides = [
     priceLabel: "/mo",
     discount: "60% OFF",
     cta: "Configure Your VPS",
-    ctaHref: "https://kharkan.com/dash/index.php",
+    ctaHref: "https://kharkan.com/user/login",
     perks: ["Full Root Access", "NVMe SSD Storage", "Scalable on Demand"],
     gradient: "from-[#022c22] via-[#065f46] to-[#059669]",
     accentColor: "#6ee7b7",
@@ -108,7 +108,7 @@ const slides = [
     priceLabel: "/user/mo",
     discount: "50% OFF",
     cta: "Get Business Email",
-    ctaHref: "https://kharkan.com/dash/index.php",
+    ctaHref: "https://kharkan.com/user/login",
     perks: ["50 GB Mailbox Storage", "Anti-spam & Antivirus", "Calendar & Contacts Sync"],
     gradient: "from-[#451a03] via-[#92400e] to-[#d97706]",
     accentColor: "#fde68a",
@@ -131,7 +131,7 @@ const slides = [
     priceLabel: "/mo",
     discount: "55% OFF",
     cta: "Start Reselling Today",
-    ctaHref: "https://kharkan.com/dash/index.php",
+    ctaHref: "https://kharkan.com/user/login",
     perks: ["White-label Branding", "Free WHMCS License", "Private Nameservers"],
     gradient: "from-[#2e1065] via-[#6b21a8] to-[#a855f7]",
     accentColor: "#e9d5ff",
@@ -351,7 +351,7 @@ export default function Hero() {
                 {s.cta}
               </a>
               <a
-                href="https://kharkan.com/dash/index.php"
+                href="https://kharkan.com/user/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 inline-flex justify-center items-center border-2 border-white/35 text-white font-bold text-[13px] sm:text-sm px-3 sm:px-7 py-2.5 sm:py-3.5 rounded-lg sm:rounded-xl hover:bg-white/10 transition-colors whitespace-nowrap"

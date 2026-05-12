@@ -145,7 +145,7 @@ function HostingMegaMenu() {
             {hostingItems.map((item) => <MenuRow key={item.label} item={item} />)}
           </div>
           <div className="mt-3 pt-3 border-t border-gray-100 px-1">
-            <a href="https://kharkan.com/dash/index.php" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
+            <a href="https://kharkan.com/user/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
               <span>View all hosting plans</span>
               <ArrowRight size={12} />
             </a>
@@ -171,7 +171,7 @@ function HostingMegaMenu() {
             </div>
           </div>
           <a
-            href="https://kharkan.com/dash/index.php"
+            href="https://kharkan.com/user/login"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 w-full bg-white text-[#1565c0] text-[12px] font-bold py-2.5 rounded-xl text-center hover:bg-blue-50 transition-colors flex items-center justify-center gap-1.5"
@@ -199,7 +199,7 @@ function WordPressMegaMenu() {
             {wordpressItems.map((item) => <MenuRow key={item.label} item={item} />)}
           </div>
           <div className="mt-3 pt-3 border-t border-gray-100 px-1">
-            <a href="https://kharkan.com/dash/index.php" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
+            <a href="https://kharkan.com/user/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#1565c0] hover:text-[#1251a3] transition-colors">
               <span>Explore WordPress plans</span>
               <ArrowRight size={12} />
             </a>
@@ -219,7 +219,7 @@ function WordPressMegaMenu() {
             </div>
           </div>
           <a
-            href="https://kharkan.com/dash/index.php"
+            href="https://kharkan.com/user/login"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 w-full bg-white text-purple-700 text-[12px] font-bold py-2.5 rounded-xl text-center hover:bg-purple-50 transition-colors flex items-center justify-center gap-1.5"
@@ -432,7 +432,7 @@ export default function Header() {
         {/* Right CTA — desktop */}
         <div className="hidden xl:flex items-center gap-2 shrink-0">
           <a
-            href="https://kharkan.com/dash/index.php?rp=/login"
+            href="https://kharkan.com/user/login"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-[13px] font-semibold text-[#1a237e] border border-[#1a237e]/20 bg-blue-50 hover:bg-blue-100 hover:border-[#1a237e]/40 transition-all px-3.5 py-1.5 rounded-xl whitespace-nowrap shadow-sm"
@@ -445,7 +445,7 @@ export default function Header() {
             My Account
           </a>
           <a
-            href="https://kharkan.com/dash/index.php"
+            href="https://kharkan.com/user/login"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#1a237e] to-[#1565c0] text-white text-[13px] font-semibold px-5 py-2 rounded-xl hover:from-[#1251a3] hover:to-[#0d47a1] transition-all shadow-sm hover:shadow-md whitespace-nowrap flex items-center gap-1.5"
@@ -458,7 +458,7 @@ export default function Header() {
         {/* Mobile: condensed CTA + hamburger */}
         <div className="flex xl:hidden items-center gap-2 shrink-0">
           <a
-            href="https://kharkan.com/dash/index.php"
+            href="https://kharkan.com/user/login"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1 bg-gradient-to-r from-[#1a237e] to-[#1565c0] text-white text-xs font-semibold px-3.5 py-2 rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
@@ -526,7 +526,7 @@ export default function Header() {
 
             <div className="border-t border-gray-100 pt-3 mt-2 space-y-2">
               <a
-                href="https://kharkan.com/dash/index.php?rp=/login"
+                href="https://kharkan.com/user/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-3 py-2.5 text-sm font-semibold text-[#1a237e] bg-blue-50 border border-[#1a237e]/20 rounded-xl hover:bg-blue-100 transition-colors"
@@ -539,7 +539,7 @@ export default function Header() {
                 My Account
               </a>
               <a
-                href="https://kharkan.com/dash/index.php"
+                href="https://kharkan.com/user/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#1a237e] to-[#1565c0] text-white text-sm font-semibold px-5 py-3 rounded-xl hover:opacity-90 transition-opacity"

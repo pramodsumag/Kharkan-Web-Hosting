@@ -134,7 +134,7 @@ export default function LimitedTimeOffer() {
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
-                  href="https://kharkan.com/dash/index.php"
+                  href="https://kharkan.com/user/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
