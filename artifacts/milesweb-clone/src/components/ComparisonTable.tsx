@@ -35,16 +35,49 @@ function Cell({ val, brand }: { val: boolean | string; brand?: "kt" | "other" })
 
 export default function ComparisonTable() {
   return (
-    <section className="py-16 bg-[#0d1240]">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="relative py-20 lg:py-24 overflow-hidden bg-gradient-to-br from-[#0a0e2e] via-[#1a237e] to-[#312e81]">
+      {/* Decorative animated blobs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -left-32 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-blue-500/30 to-cyan-400/20 blur-3xl animate-blob" />
+        <div className="absolute top-1/4 -right-40 w-[700px] h-[700px] rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-32 left-1/4 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-indigo-500/25 to-violet-400/15 blur-3xl animate-blob animation-delay-4000" />
+      </div>
+
+      {/* Grid pattern overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+          maskImage: "radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%)",
+        }}
+      />
+
+      {/* Twinkling stars */}
+      <div className="pointer-events-none absolute inset-0">
+        <span className="absolute top-[12%] left-[15%] w-1 h-1 rounded-full bg-white/80 animate-pulse" />
+        <span className="absolute top-[20%] right-[20%] w-1.5 h-1.5 rounded-full bg-yellow-300/70 animate-pulse animation-delay-2000" />
+        <span className="absolute top-[35%] left-[8%] w-1 h-1 rounded-full bg-cyan-200/70 animate-pulse animation-delay-4000" />
+        <span className="absolute bottom-[18%] right-[12%] w-1.5 h-1.5 rounded-full bg-pink-200/70 animate-pulse" />
+        <span className="absolute bottom-[28%] left-[25%] w-1 h-1 rounded-full bg-white/70 animate-pulse animation-delay-2000" />
+        <span className="absolute top-[60%] right-[8%] w-1 h-1 rounded-full bg-blue-200/80 animate-pulse animation-delay-4000" />
+      </div>
+
+      {/* Top & bottom accent lines */}
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent" />
+
+      <div className="relative max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/10 text-blue-200 font-semibold text-sm px-5 py-2 rounded-full mb-5">
-            ⚔️ Head-to-Head
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-blue-100 font-semibold text-sm px-5 py-2 rounded-full mb-5 shadow-lg">
+            <span className="text-base">⚔️</span> Head-to-Head Comparison
           </div>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-3">
-            Kharkan Technology vs Hostinger vs GoDaddy
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
+            Kharkan Technology <span className="text-blue-300/70 font-bold">vs</span> Hostinger <span className="text-blue-300/70 font-bold">vs</span> GoDaddy
           </h2>
-          <p className="text-blue-300 text-base max-w-xl mx-auto">
+          <p className="text-blue-200/90 text-base lg:text-lg max-w-2xl mx-auto">
             Who delivers more value for Indian businesses? See the real difference side by side.
           </p>
         </div>
