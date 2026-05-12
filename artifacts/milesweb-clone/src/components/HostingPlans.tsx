@@ -5,9 +5,10 @@ const plans = [
   {
     name: "Starter",
     subtitle: "Perfect for beginners",
-    price: "39",
-    originalPrice: "195",
-    discount: "80% OFF",
+    pricing: {
+      monthly: { price: "99", originalPrice: "199", discount: "50% OFF", billing: "billed monthly + GST" },
+      yearly:  { price: "39", originalPrice: "195", discount: "80% OFF", billing: "billed annually + GST" },
+    },
     features: [
       "Host 1 Website",
       "30 GB NVMe SSD Storage",
@@ -43,9 +44,10 @@ const plans = [
   {
     name: "Advanced",
     subtitle: "Best for growing sites",
-    price: "69",
-    originalPrice: "345",
-    discount: "80% OFF",
+    pricing: {
+      monthly: { price: "179", originalPrice: "359", discount: "50% OFF", billing: "billed monthly + GST" },
+      yearly:  { price: "69",  originalPrice: "345", discount: "80% OFF", billing: "billed annually + GST" },
+    },
     features: [
       "Host 10 Websites",
       "50 GB NVMe SSD Storage",
@@ -84,9 +86,10 @@ const plans = [
   {
     name: "Ultimate",
     subtitle: "For high-traffic websites",
-    price: "99",
-    originalPrice: "495",
-    discount: "80% OFF",
+    pricing: {
+      monthly: { price: "249", originalPrice: "499", discount: "50% OFF", billing: "billed monthly + GST" },
+      yearly:  { price: "99",  originalPrice: "495", discount: "80% OFF", billing: "billed annually + GST" },
+    },
     features: [
       "Host Unlimited Websites",
       "Unlimited NVMe SSD Storage",
@@ -129,6 +132,7 @@ const plans = [
 
 export default function HostingPlans() {
   const [activePlan, setActivePlan] = useState(1); // Advanced by default
+  const [billing, setBilling] = useState<"monthly" | "yearly">("yearly");
 
   return (
     <section id="plans" className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-[#f0f4ff] via-[#eef2ff] to-[#fef3f9]">
@@ -162,6 +166,37 @@ export default function HostingPlans() {
             Choose the plan that fits your needs. All plans include free domain, free SSL,
             daily backups, LiteSpeed servers and 24/7 Indian support.
           </p>
+
+          {/* Monthly / Yearly billing toggle */}
+          <div className="mt-7 flex justify-center">
+            <div className="relative inline-flex items-center bg-white/80 backdrop-blur-md border border-blue-200/60 rounded-full p-1.5 shadow-sm" data-testid="billing-toggle">
+              <button
+                type="button"
+                onClick={() => setBilling("monthly")}
+                className={`relative z-10 px-5 sm:px-7 py-2 rounded-full text-sm font-bold transition-colors ${
+                  billing === "monthly" ? "bg-[#1565c0] text-white shadow-md" : "text-gray-600 hover:text-[#1565c0]"
+                }`}
+                data-testid="button-billing-monthly"
+              >
+                Monthly
+              </button>
+              <button
+                type="button"
+                onClick={() => setBilling("yearly")}
+                className={`relative z-10 px-5 sm:px-7 py-2 rounded-full text-sm font-bold transition-colors flex items-center gap-2 ${
+                  billing === "yearly" ? "bg-[#1565c0] text-white shadow-md" : "text-gray-600 hover:text-[#1565c0]"
+                }`}
+                data-testid="button-billing-yearly"
+              >
+                Yearly
+                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                  billing === "yearly" ? "bg-white text-[#1565c0]" : "bg-green-100 text-green-700"
+                }`}>
+                  Save 80%
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Mobile: Tab switcher */}
@@ -208,20 +243,20 @@ export default function HostingPlans() {
                     <p className="text-sm text-gray-500 mt-0.5">{plan.subtitle}</p>
                   </div>
                   <span className="inline-block bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">
-                    {plan.discount}
+                    {plan.pricing[billing].discount}
                   </span>
                 </div>
 
                 <div className="mb-5 pb-5 border-b border-gray-100">
                   <div className="flex items-end gap-1">
-                    <span className="text-gray-400 text-sm line-through">₹{plan.originalPrice}</span>
+                    <span className="text-gray-400 text-sm line-through">₹{plan.pricing[billing].originalPrice}</span>
                   </div>
                   <div className="flex items-end gap-1 mt-0.5">
                     <span className="text-sm text-gray-600 font-medium">₹</span>
-                    <span className="text-5xl font-extrabold text-[#1a237e]">{plan.price}</span>
+                    <span className="text-5xl font-extrabold text-[#1a237e]">{plan.pricing[billing].price}</span>
                     <span className="text-gray-400 text-sm mb-1">/mo</span>
                   </div>
-                  <p className="text-xs text-gray-400 mt-0.5">billed annually + GST</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{plan.pricing[billing].billing}</p>
                 </div>
 
                 <a
@@ -275,17 +310,17 @@ export default function HostingPlans() {
 
               <div className="mb-2">
                 <span className="inline-block bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded mb-2">
-                  {plan.discount}
+                  {plan.pricing[billing].discount}
                 </span>
                 <div className="flex items-end gap-1">
-                  <span className="text-gray-400 text-sm line-through">₹{plan.originalPrice}</span>
+                  <span className="text-gray-400 text-sm line-through">₹{plan.pricing[billing].originalPrice}</span>
                 </div>
                 <div className="flex items-end gap-1 mt-0.5">
                   <span className="text-sm text-gray-600 font-medium">₹</span>
-                  <span className="text-4xl font-extrabold text-[#1a237e]">{plan.price}</span>
+                  <span className="text-4xl font-extrabold text-[#1a237e]">{plan.pricing[billing].price}</span>
                   <span className="text-gray-400 text-sm mb-1">/mo</span>
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">billed annually + GST</p>
+                <p className="text-xs text-gray-400 mt-0.5">{plan.pricing[billing].billing}</p>
               </div>
 
               <a
