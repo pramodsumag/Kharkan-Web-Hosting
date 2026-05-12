@@ -366,11 +366,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-3 xl:px-4 flex items-center justify-between h-14 xl:h-16 gap-2">
 
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5 shrink-0 min-w-0 group" data-testid="link-logo">
-          {/* KT logomark */}
+        <a href="/" className="flex items-center gap-2 shrink-0 min-w-0 group" data-testid="link-logo">
+          {/* KT logomark badge */}
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-[#1565c0] to-[#1a237e] flex items-center justify-center text-white font-extrabold text-[11px] sm:text-sm shadow-md shrink-0 tracking-tight">
+            KT
+          </div>
           <div className="flex flex-col leading-tight min-w-0">
-            <span className="text-sm sm:text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
-              Kharkan Technology
+            <span className="text-[13px] sm:text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
+              Kharkan <span className="text-[#1565c0]">Technology</span>
             </span>
             <span className="hidden sm:block text-[8px] xl:text-[9px] font-semibold text-emerald-500 tracking-wide whitespace-nowrap">
               Your Web Hosting, Our Responsibility.
