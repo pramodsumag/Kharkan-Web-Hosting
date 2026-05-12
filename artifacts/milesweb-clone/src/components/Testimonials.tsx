@@ -31,7 +31,7 @@ const reviews = [
     name: "Siddharth Rao",
     role: "Startup Founder",
     stars: 5,
-    text: "As a startup on a budget, Kharkan Technology's pricing was perfect. Starting at just ₹39/mo with all features included was incredible value. Scaling has been seamless as our traffic grew.",
+    text: "As a startup on a budget, Kharkan Technology's pricing was perfect. Starting at just ₹29/mo with all features included was incredible value. Scaling has been seamless as our traffic grew.",
     location: "Hyderabad, India",
   },
   {

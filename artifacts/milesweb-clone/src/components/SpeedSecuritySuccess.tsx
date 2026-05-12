@@ -151,7 +151,7 @@ export default function SpeedSecuritySuccess() {
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             Kharkan Technology combines cutting-edge infrastructure, enterprise-grade protection, and
-            award-winning support into every hosting plan — starting from just ₹39/mo.
+            award-winning support into every hosting plan — starting from just ₹29/mo.
           </p>
         </div>
 

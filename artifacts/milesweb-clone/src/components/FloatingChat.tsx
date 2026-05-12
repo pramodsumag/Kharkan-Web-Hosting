@@ -7,7 +7,7 @@ const channels = [
     label: "WhatsApp",
     sub: "Typically replies in minutes",
     color: "bg-green-500 hover:bg-green-600",
-    href: "https://wa.me/911234567890?text=Hi%2C%20I%20need%20help%20with%20Kharkan%20Technology%20hosting",
+    href: "https://wa.me/917011058947?text=Hi%2C%20I%20need%20help%20with%20Kharkan%20Technology%20hosting",
   },
   {
     icon: "🔵",
@@ -19,16 +19,16 @@ const channels = [
   {
     icon: "📞",
     label: "Call Support",
-    sub: "+91 12345 67890",
+    sub: "+91 70110 58947",
     color: "bg-purple-600 hover:bg-purple-700",
-    href: "tel:+911234567890",
+    href: "tel:+917011058947",
   },
   {
     icon: "📧",
     label: "Email Us",
-    sub: "support@kharkantechnology.in",
+    sub: "support@kharkan.com",
     color: "bg-orange-500 hover:bg-orange-600",
-    href: "mailto:support@kharkantechnology.in",
+    href: "mailto:support@kharkan.com",
   },
 ];
 

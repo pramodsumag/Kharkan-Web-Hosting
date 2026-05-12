@@ -142,7 +142,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Contact Us — 24/7 Support | Kharkan Technology"
-        description="Get in touch with Kharkan Technology's expert support team anytime. Call +91 12345 67890, email support@kharkantechnology.in, or use live chat. Head office in Pune, India."
+        description="Get in touch with Kharkan Technology's expert support team anytime. Call +91 7011058947, email support@kharkan.com, or use live chat. Head office in Pune, India."
         keywords="contact Kharkan Technology, hosting support India, web hosting help, Pune hosting company contact, 24/7 hosting support"
         canonical="/contact"
         jsonLd={contactJsonLd}
@@ -414,7 +414,7 @@ export default function ContactPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { q: "How quickly do you respond?", a: "Live chat replies in under 2 minutes. Email responses within 2–4 hours. Phone support is immediate during business hours." },
-              { q: "Do you offer phone support?", a: "Yes! Call us at +91 12345 67890. Our support team is available 9AM–9PM IST, Mon–Sat." },
+              { q: "Do you offer phone support?", a: "Yes! Call us at +91 7011058947. Our support team is available 9AM–9PM IST, Mon–Sat." },
               { q: "Can I get a pre-sales consultation?", a: "Absolutely. Our sales experts will help you choose the right plan for your specific business needs — no pressure, just genuine advice." },
               { q: "What languages do you support?", a: "We provide support in English and Hindi. Regional language support may be arranged for large enterprise accounts." },
               { q: "How do I raise a billing dispute?", a: "Email billing@kharkantechnology.in or use this form with the 'Billing & Payments' department selected. We resolve billing issues within 24 hours." },
