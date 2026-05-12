@@ -48,7 +48,7 @@ const plans = [
     discount: "80% OFF",
     features: [
       "Host Unlimited Websites",
-      "Unlimited NVMe SSD Storage",
+      "50 GB NVMe SSD Storage",
       "Unmetered Bandwidth",
       "Free .com / .in Domain (1st year)",
       "Free SSL Certificate (Let's Encrypt)",
