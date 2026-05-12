@@ -949,10 +949,13 @@ function toggleMobileSub(id) {
 }
 
 // ── DOMAIN SEARCH ──
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
 function searchDomain() {
   var raw = document.getElementById('domain-input').value.trim().toLowerCase().replace(/^https?:\/\//,'').replace(/\/$/,'');
   if (!raw) return;
-  var base = raw.split('.')[0];
+  var base = escapeHtml(raw.split('.')[0]);
   var tlds = [
     { ext: '.com', price: '₹899/yr' },
     { ext: '.in',  price: '₹699/yr' },
