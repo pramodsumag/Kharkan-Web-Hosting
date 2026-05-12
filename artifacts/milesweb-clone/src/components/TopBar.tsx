@@ -13,8 +13,7 @@ export default function TopBar() {
           <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/10 group-hover:bg-white/20 flex items-center justify-center transition-colors">
             <Mail size={11} className="text-blue-200 group-hover:text-white" />
           </span>
-          <span className="font-medium hidden xs:inline">support@kharkan.com</span>
-          <span className="font-medium xs:hidden">Email Us</span>
+          <span className="font-medium truncate">support@kharkan.com</span>
         </a>
 
         {/* Right — WhatsApp + Call */}
