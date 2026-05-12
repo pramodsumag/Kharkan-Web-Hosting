@@ -131,14 +131,36 @@ export default function HostingPlans() {
   const [activePlan, setActivePlan] = useState(1); // Advanced by default
 
   return (
-    <section id="plans" className="py-12 lg:py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-8 lg:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1a237e] mb-3">
+    <section id="plans" className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-[#f0f4ff] via-[#eef2ff] to-[#fef3f9]">
+      {/* Decorative blobs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-blue-300/40 to-indigo-300/30 blur-3xl animate-blob" />
+        <div className="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-purple-300/40 to-pink-300/30 blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-32 left-1/3 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-cyan-300/40 to-sky-300/30 blur-3xl animate-blob animation-delay-4000" />
+      </div>
+
+      {/* Dot grid pattern overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-40"
+        style={{
+          backgroundImage: "radial-gradient(circle, #1a237e 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage: "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%)",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4">
+        <div className="text-center mb-10 lg:mb-14">
+          <span className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-md border border-blue-200/60 text-[#1565c0] text-xs font-bold px-4 py-1.5 rounded-full shadow-sm mb-4">
+            <Star size={12} fill="currentColor" /> India's Most Loved Hosting
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 bg-gradient-to-r from-[#1a237e] via-[#1565c0] to-[#7e22ce] bg-clip-text text-transparent leading-tight">
             Shared Hosting Plans
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
-            Choose the plan that fits your needs. All plans include free domain, SSL, and 24/7 support.
+          <p className="text-gray-600 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
+            Choose the plan that fits your needs. All plans include free domain, free SSL,
+            daily backups, LiteSpeed servers and 24/7 Indian support.
           </p>
         </div>
 
