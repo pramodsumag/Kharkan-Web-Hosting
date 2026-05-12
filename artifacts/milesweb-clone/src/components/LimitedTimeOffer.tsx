@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { Flame, Clock, ArrowRight, Sparkles, Tag } from "lucide-react";
 
+const OFFER_DURATION_MS = 2 * 60 * 60 * 1000; // 2 hours
+const STORAGE_KEY = "ktOfferEnd_v2";
+
 function getEndDate() {
-  const stored = typeof window !== "undefined" ? window.localStorage.getItem("ktOfferEnd") : null;
+  const stored = typeof window !== "undefined" ? window.localStorage.getItem(STORAGE_KEY) : null;
   if (stored) {
     const t = parseInt(stored, 10);
     if (!Number.isNaN(t) && t > Date.now()) return t;
   }
-  const end = Date.now() + 3 * 24 * 60 * 60 * 1000 + 7 * 60 * 60 * 1000 + 42 * 60 * 1000;
-  if (typeof window !== "undefined") window.localStorage.setItem("ktOfferEnd", String(end));
+  const end = Date.now() + OFFER_DURATION_MS;
+  if (typeof window !== "undefined") window.localStorage.setItem(STORAGE_KEY, String(end));
   return end;
 }
 
@@ -30,10 +33,10 @@ function useCountdown(target: number) {
   return { days, hours, minutes, seconds };
 }
 
-const FRIENDLY_END = (() => {
-  const d = new Date(Date.now() + 3 * 86_400_000);
-  return d.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
-})();
+function formatFriendlyEnd(ts: number) {
+  const d = new Date(ts);
+  return d.toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true });
+}
 
 function Unit({ value, label }: { value: number; label: string }) {
   return (
@@ -115,7 +118,7 @@ export default function LimitedTimeOffer() {
 
               <div className="mt-4 flex items-center gap-2 justify-center lg:justify-start text-white/80 text-xs sm:text-sm">
                 <Clock size={14} />
-                <span>Offer ends <span className="font-bold text-white">{FRIENDLY_END}</span></span>
+                <span>Offer ends today at <span className="font-bold text-white">{formatFriendlyEnd(target)}</span></span>
                 <span className="hidden sm:inline">·</span>
                 <Tag size={14} className="hidden sm:inline" />
                 <span className="hidden sm:inline">Use code <span className="font-bold text-yellow-200">KHARKAN80</span></span>
