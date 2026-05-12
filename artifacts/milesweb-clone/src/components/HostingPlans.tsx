@@ -47,7 +47,7 @@ const plans = [
     originalPrice: "345",
     discount: "80% OFF",
     features: [
-      "Host Unlimited Websites",
+      "Host 10 Websites",
       "50 GB NVMe SSD Storage",
       "Unmetered Bandwidth",
       "Free .com / .in Domain (1st year)",
