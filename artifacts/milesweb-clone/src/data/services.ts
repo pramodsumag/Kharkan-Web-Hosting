@@ -50,7 +50,7 @@ export const services: Record<string, ServiceData> = {
     name: "Web Hosting",
     tagline: "Lightning-fast Linux hosting trusted by 10 lakh+ Indian websites",
     shortDesc:
-      "Premium shared web hosting on LiteSpeed servers with free SSL, free domain, daily backups and 24/7 expert support — starting at just ₹49/mo.",
+      "Premium shared web hosting on LiteSpeed servers with free SSL, free domain, daily backups and 24/7 expert support — starting at just ₹29/mo.",
     longDesc:
       "Kharkan Technology's web hosting is engineered to give your website the speed, security and reliability it deserves. Powered by LiteSpeed web servers, NVMe SSD storage and our 6 globally distributed Tier-3 data centres, every site loads up to 20x faster than traditional Apache hosting. Whether you're launching your first blog, a portfolio, a small business site or a high-traffic eCommerce store, our shared hosting plans scale with you — backed by a 30-day money-back guarantee, free migration and our award-winning Indian support team available round the clock.",
     heroImage:
@@ -62,7 +62,7 @@ export const services: Record<string, ServiceData> = {
     stats: [
       { val: "20x", label: "Faster Load Time" },
       { val: "99.99%", label: "Uptime SLA" },
-      { val: "₹49/mo", label: "Starting Price" },
+      { val: "₹29/mo", label: "Starting Price" },
       { val: "24/7", label: "Indian Support" },
     ],
     features: [
@@ -86,25 +86,25 @@ export const services: Record<string, ServiceData> = {
     plans: [
       {
         name: "Starter",
-        price: "₹49",
-        oldPrice: "₹199",
+        price: "₹29",
+        oldPrice: "₹145",
         per: "/mo",
-        features: ["1 Website", "10 GB NVMe SSD", "Unmetered Bandwidth", "Free SSL Certificate", "1 Email Account", "24/7 Support"],
+        features: ["1 Website", "30 GB NVMe SSD", "Unmetered Bandwidth", "Free SSL Certificate", "3 Email Accounts", "24/7 Support"],
       },
       {
-        name: "Power",
-        price: "₹99",
-        oldPrice: "₹399",
+        name: "Advanced",
+        price: "₹49",
+        oldPrice: "₹245",
         per: "/mo",
         highlight: true,
-        features: ["Unlimited Websites", "50 GB NVMe SSD", "Unmetered Bandwidth", "Free SSL + Free Domain", "Unlimited Emails", "Free CDN", "Daily Backups", "Priority Support"],
+        features: ["10 Websites", "50 GB NVMe SSD", "Unmetered Bandwidth", "Free SSL + Free Domain", "Unlimited Emails", "Free CDN", "Daily Backups", "Priority Support"],
       },
       {
-        name: "Pro",
-        price: "₹199",
-        oldPrice: "₹599",
+        name: "Ultimate",
+        price: "₹99",
+        oldPrice: "₹495",
         per: "/mo",
-        features: ["Unlimited Websites", "100 GB NVMe SSD", "Unmetered Bandwidth", "Free SSL + Free Domain", "Unlimited Emails", "Free CDN", "Daily Backups", "Free Dedicated IP", "VIP Support"],
+        features: ["Unlimited Websites", "Unlimited NVMe SSD", "Unmetered Bandwidth", "Free SSL + Free Domain", "Unlimited Emails", "Premium CDN", "Daily Backups", "Free Dedicated IP", "Dedicated Support Manager"],
       },
     ],
     whyUs: [
@@ -119,9 +119,9 @@ export const services: Record<string, ServiceData> = {
       { q: "Is there a money-back guarantee?", a: "Yes. We offer a 30-day no-questions-asked money-back guarantee on all shared hosting plans." },
       { q: "What kind of support do you provide?", a: "24/7/365 expert support via live chat, email and phone — staffed by certified engineers in our Madhepura office. Average chat response time is under 90 seconds." },
     ],
-    seoTitle: "Best Web Hosting in India — From ₹49/mo with Free Domain & SSL",
-    seoDesc: "India's fastest LiteSpeed web hosting starting at just ₹49/mo. Free domain, free SSL, daily backups, 99.99% uptime & 24/7 Indian support. 30-day money-back guarantee.",
-    seoKeywords: "web hosting India, cheap web hosting, LiteSpeed hosting, free SSL hosting, best Indian hosting, hosting with free domain, ₹49 hosting",
+    seoTitle: "Best Web Hosting in India — From ₹29/mo with Free Domain & SSL",
+    seoDesc: "India's fastest LiteSpeed web hosting starting at just ₹29/mo. Free domain, free SSL, daily backups, 99.99% uptime & 24/7 Indian support. 30-day money-back guarantee.",
+    seoKeywords: "web hosting India, cheap web hosting, LiteSpeed hosting, free SSL hosting, best Indian hosting, hosting with free domain, ₹29 hosting",
   },
 
   "domain-registration": {

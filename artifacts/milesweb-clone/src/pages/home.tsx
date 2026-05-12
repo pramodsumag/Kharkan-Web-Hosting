@@ -88,8 +88,8 @@ const homeJsonLd = [
     "name": "Kharkan Technology Hosting Plans",
     "description": "Shared web hosting plans from Kharkan Technology",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Starter Hosting — ₹39/mo", "url": "https://kharkantechnology.in/#plans" },
-      { "@type": "ListItem", "position": 2, "name": "Advanced Hosting — ₹69/mo", "url": "https://kharkantechnology.in/#plans" },
+      { "@type": "ListItem", "position": 1, "name": "Starter Hosting — ₹29/mo", "url": "https://kharkantechnology.in/#plans" },
+      { "@type": "ListItem", "position": 2, "name": "Advanced Hosting — ₹49/mo", "url": "https://kharkantechnology.in/#plans" },
       { "@type": "ListItem", "position": 3, "name": "Ultimate Hosting — ₹99/mo", "url": "https://kharkantechnology.in/#plans" },
     ],
   },
@@ -99,9 +99,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Web Hosting from ₹39/mo | India's Fastest & Trusted Host"
-        description="Kharkan Technology offers India's fastest web hosting from ₹39/mo. LiteSpeed servers, 99.99% uptime, free SSL, free domain & 24/7 expert support. Trusted by 1M+ websites."
-        keywords="web hosting India, cheap hosting India, wordpress hosting, shared hosting, domain registration, LiteSpeed hosting, Indian web hosting, hosting ₹39"
+        title="Web Hosting from ₹29/mo | India's Fastest & Trusted Host"
+        description="Kharkan Technology offers India's fastest web hosting from ₹29/mo. LiteSpeed servers, 99.99% uptime, free SSL, free domain & 24/7 expert support. Trusted by 1M+ websites."
+        keywords="web hosting India, cheap hosting India, wordpress hosting, shared hosting, domain registration, LiteSpeed hosting, Indian web hosting, hosting ₹29"
         canonical="/"
         jsonLd={homeJsonLd}
       />
