@@ -238,7 +238,7 @@ export default function Hero() {
           <div className="absolute top-1/2 left-1/3 w-[700px] h-[700px] rounded-full bg-white opacity-[0.03] -translate-y-1/2" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 pt-5 sm:pt-8 lg:pt-0 pb-3 sm:pb-4 lg:pb-0 lg:min-h-[700px] grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 pt-5 sm:pt-8 lg:pt-0 pb-3 sm:pb-4 lg:pb-0 lg:min-h-[500px] grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 items-center">
           {/* ── MOBILE: compact visual card shown FIRST (above text) ── */}
           <div
             key={`right-mob-${current}`}
@@ -372,7 +372,7 @@ export default function Hero() {
             style={{ animation: "heroFadeIn 0.65s ease both" }}
           >
             <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm">
-              <div className="relative h-[520px] overflow-hidden">
+              <div className="relative h-[340px] overflow-hidden">
                 <img
                   src={s.imgUrl}
                   alt={s.title}
