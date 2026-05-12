@@ -259,7 +259,7 @@ export default function HostingPlans() {
                   <div className="flex items-end gap-1 mt-0.5">
                     <span className="text-sm text-gray-600 font-medium">₹</span>
                     <span className="text-5xl font-extrabold text-[#1a237e]">{plan.pricing[billing].price}</span>
-                    <span className="text-gray-400 text-sm mb-1">/mo</span>
+                    <span className="text-gray-400 text-sm mb-1">{billing === "yearly" ? "/yearly" : "/mo"}</span>
                   </div>
                   <p className="text-xs text-gray-400 mt-0.5">{plan.pricing[billing].billing}</p>
                 </div>
@@ -323,7 +323,7 @@ export default function HostingPlans() {
                 <div className="flex items-end gap-1 mt-0.5">
                   <span className="text-sm text-gray-600 font-medium">₹</span>
                   <span className="text-4xl font-extrabold text-[#1a237e]">{plan.pricing[billing].price}</span>
-                  <span className="text-gray-400 text-sm mb-1">/mo</span>
+                  <span className="text-gray-400 text-sm mb-1">{billing === "yearly" ? "/yearly" : "/mo"}</span>
                 </div>
                 <p className="text-xs text-gray-400 mt-0.5">{plan.pricing[billing].billing}</p>
               </div>
