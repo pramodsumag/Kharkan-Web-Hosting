@@ -17,10 +17,10 @@ title = "Kharkan Technology — Full Source Code"
 id = "POoeS0pFPdzNpIkwsUjai"
 uri = "file://public_html.zip"
 type = "unspecified"
-title = "public_html.zip — Production build with all 9 service pages (483 KB)"
+title = "public_html.zip — Production build with mobile-optimized slider (483 KB)"
 
 [[outputs]]
 id = "SREzox2X_s5W_zmSWhg9m"
 uri = "file://kharkan-technology-source.zip"
 type = "unspecified"
-title = "kharkan-technology-source.zip — Full source code (442 KB)"
+title = "kharkan-technology-source.zip — Full source code (443 KB)"

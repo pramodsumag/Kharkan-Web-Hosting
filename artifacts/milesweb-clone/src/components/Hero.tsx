@@ -238,25 +238,68 @@ export default function Hero() {
           <div className="absolute top-1/2 left-1/3 w-[700px] h-[700px] rounded-full bg-white opacity-[0.03] -translate-y-1/2" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 pt-8 sm:pt-10 lg:pt-12 pb-4 grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 pt-5 sm:pt-8 lg:pt-12 pb-3 sm:pb-4 grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 items-center">
+          {/* ── MOBILE: compact visual card shown FIRST (above text) ── */}
+          <div
+            key={`right-mob-${current}`}
+            className="lg:hidden order-1"
+            style={{ animation: "heroFadeIn 0.6s ease both" }}
+          >
+            <div className="rounded-2xl border border-white/10 overflow-hidden shadow-xl bg-black/20">
+              <div className="relative h-32 sm:h-44 overflow-hidden">
+                <img
+                  src={s.imgUrl}
+                  alt={s.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-2.5 left-2.5 flex items-center gap-2">
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center text-base shadow"
+                    style={{ background: "rgba(255,255,255,0.18)", backdropFilter: "blur(6px)" }}
+                  >
+                    {s.icon}
+                  </div>
+                  <div>
+                    <div className="text-white font-bold text-sm leading-tight">{s.title}</div>
+                    <div className="text-white/60 text-[10px]">by Kharkan Technology</div>
+                  </div>
+                </div>
+                <div className={`absolute top-2.5 right-2.5 font-bold text-[11px] px-2 py-0.5 rounded-md shadow ${s.discountBg}`}>
+                  {s.discount}
+                </div>
+              </div>
+              {/* Mobile stats row */}
+              <div className="grid grid-cols-3 divide-x divide-white/10 bg-white/5">
+                {s.stats.map((st) => (
+                  <div key={st.l} className="py-2 text-center">
+                    <div className="text-white font-extrabold text-sm sm:text-base">{st.v}</div>
+                    <div className="text-white/55 text-[10px] leading-tight">{st.l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* ── LEFT: text content ── */}
           <div
             key={`left-${current}`}
-            className="space-y-4 sm:space-y-5"
+            className="space-y-3 sm:space-y-4 lg:space-y-5 order-2 lg:order-1"
             style={{ animation: "heroFadeIn 0.55s ease both" }}
           >
-            <span className={`inline-block text-xs font-bold px-3 py-1.5 rounded-full ${s.badgeBg}`}>
+            <span className={`inline-block text-[11px] sm:text-xs font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full ${s.badgeBg}`}>
               {s.badge}
             </span>
 
             <div>
               <p
-                className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] mb-1"
+                className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] mb-1"
                 style={{ color: s.accentColor }}
               >
                 {s.title}
               </p>
-              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white leading-tight">
+              <h1 className="text-[26px] leading-[1.15] sm:text-3xl lg:text-5xl font-extrabold text-white">
                 {s.subtitleStart}{" "}
                 <span
                   className="inline-block align-bottom overflow-hidden"
@@ -273,35 +316,35 @@ export default function Hero() {
               </h1>
             </div>
 
-            <p className="text-xs sm:text-sm lg:text-base text-white/75 leading-relaxed max-w-lg">
+            <p className="text-[13px] sm:text-sm lg:text-base text-white/75 leading-relaxed max-w-lg">
               {s.desc}
             </p>
 
-            <ul className="space-y-2">
+            <ul className="space-y-1.5 sm:space-y-2">
               {s.perks.map((p) => (
-                <li key={p} className="flex items-center gap-2 text-xs sm:text-sm text-white/90">
-                  <CheckCircle2 size={14} style={{ color: s.accentColor }} className="shrink-0" />
+                <li key={p} className="flex items-center gap-2 text-[12px] sm:text-sm text-white/90">
+                  <CheckCircle2 size={13} style={{ color: s.accentColor }} className="shrink-0" />
                   {p}
                 </li>
               ))}
             </ul>
 
             {/* Price row */}
-            <div className="flex items-end gap-2">
-              <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none">
+            <div className="flex items-end gap-2 flex-wrap">
+              <span className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-none">
                 {s.price}
               </span>
-              <span className="text-white/60 text-xs sm:text-sm mb-1">{s.priceLabel}</span>
-              <span className={`text-xs font-bold px-2 py-1 rounded-lg mb-1 ${s.discountBg}`}>
+              <span className="text-white/60 text-[11px] sm:text-sm mb-0.5 sm:mb-1">{s.priceLabel}</span>
+              <span className={`text-[10px] sm:text-xs font-bold px-2 py-0.5 sm:py-1 rounded-md sm:rounded-lg mb-0.5 sm:mb-1 ${s.discountBg}`}>
                 {s.discount}
               </span>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3">
+            {/* CTAs — side-by-side on mobile */}
+            <div className="flex flex-row gap-2 sm:gap-3">
               <a
                 href={s.ctaHref}
-                className="inline-flex justify-center items-center bg-white font-bold text-sm px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
+                className="flex-1 inline-flex justify-center items-center bg-white font-bold text-[13px] sm:text-sm px-3 sm:px-7 py-2.5 sm:py-3.5 rounded-lg sm:rounded-xl hover:bg-gray-100 transition-colors shadow-lg whitespace-nowrap"
                 style={{ color: "#1a237e" }}
                 data-testid="button-start-now"
               >
@@ -311,9 +354,9 @@ export default function Hero() {
                 href="https://kharkan.com/dash/index.php"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center border-2 border-white/35 text-white font-bold text-sm px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl hover:bg-white/10 transition-colors"
+                className="flex-1 inline-flex justify-center items-center border-2 border-white/35 text-white font-bold text-[13px] sm:text-sm px-3 sm:px-7 py-2.5 sm:py-3.5 rounded-lg sm:rounded-xl hover:bg-white/10 transition-colors whitespace-nowrap"
               >
-                View All Plans
+                View Plans
               </a>
             </div>
 
@@ -322,54 +365,10 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* ── RIGHT: visual card ── */}
-          {/* Mobile: compact horizontal card */}
-          <div
-            key={`right-mob-${current}`}
-            className="lg:hidden"
-            style={{ animation: "heroFadeIn 0.6s ease both" }}
-          >
-            <div className="rounded-2xl border border-white/10 overflow-hidden shadow-xl bg-black/20">
-              <div className="relative h-36 sm:h-48 overflow-hidden">
-                <img
-                  src={s.imgUrl}
-                  alt={s.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                  <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center text-base shadow"
-                    style={{ background: "rgba(255,255,255,0.18)", backdropFilter: "blur(6px)" }}
-                  >
-                    {s.icon}
-                  </div>
-                  <div>
-                    <div className="text-white font-bold text-sm leading-tight">{s.title}</div>
-                    <div className="text-white/60 text-[10px]">by Kharkan Technology</div>
-                  </div>
-                </div>
-                <div className={`absolute top-3 right-3 font-bold text-xs px-2.5 py-1 rounded-lg shadow ${s.discountBg}`}>
-                  {s.discount}
-                </div>
-              </div>
-              {/* Mobile stats row */}
-              <div className="grid grid-cols-3 divide-x divide-white/10 bg-white/5">
-                {s.stats.map((st) => (
-                  <div key={st.l} className="py-2.5 text-center">
-                    <div className="text-white font-extrabold text-base">{st.v}</div>
-                    <div className="text-white/55 text-[10px]">{st.l}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {/* Desktop: full card */}
           <div
             key={`right-${current}`}
-            className="hidden lg:block"
+            className="hidden lg:block lg:order-2"
             style={{ animation: "heroFadeIn 0.65s ease both" }}
           >
             <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm">
@@ -425,32 +424,32 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ── Navigation: arrows + dots + counter all in one row ── */}
-        <div className="max-w-7xl mx-auto px-4 pb-5 flex items-center justify-between gap-3">
+        {/* ── Navigation: arrows + dots + counter ── */}
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 pb-4 sm:pb-5 flex items-center justify-between gap-2 sm:gap-3">
           {/* Counter */}
-          <span className="text-white/35 text-xs font-mono w-12 shrink-0">
+          <span className="text-white/35 text-[10px] sm:text-xs font-mono w-10 sm:w-12 shrink-0">
             {String(current + 1).padStart(2, "0")}/{String(slides.length).padStart(2, "0")}
           </span>
 
           {/* Prev arrow */}
           <button
             onClick={prev}
-            className="w-8 h-8 rounded-full border border-white/25 flex items-center justify-center text-white hover:bg-white/15 transition-colors shrink-0"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/25 flex items-center justify-center text-white hover:bg-white/15 transition-colors shrink-0"
             aria-label="Previous"
           >
-            <ChevronLeft size={16} />
+            <ChevronLeft size={14} />
           </button>
 
           {/* Dots */}
-          <div className="flex items-center gap-1.5 flex-wrap justify-center">
+          <div className="flex items-center gap-1 sm:gap-1.5 justify-center">
             {slides.map((sl, i) => (
               <button
                 key={sl.id}
                 onClick={() => goTo(i)}
                 className={`rounded-full transition-all duration-300 ${
                   i === current
-                    ? "w-6 h-2 bg-white"
-                    : "w-2 h-2 bg-white/30 hover:bg-white/60"
+                    ? "w-5 h-1.5 sm:w-6 sm:h-2 bg-white"
+                    : "w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white/30 hover:bg-white/60"
                 }`}
                 aria-label={`Go to ${sl.tabLabel}`}
               />
@@ -460,14 +459,14 @@ export default function Hero() {
           {/* Next arrow */}
           <button
             onClick={next}
-            className="w-8 h-8 rounded-full border border-white/25 flex items-center justify-center text-white hover:bg-white/15 transition-colors shrink-0"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/25 flex items-center justify-center text-white hover:bg-white/15 transition-colors shrink-0"
             aria-label="Next"
           >
-            <ChevronRight size={16} />
+            <ChevronRight size={14} />
           </button>
 
           {/* Spacer to balance counter */}
-          <span className="w-12 shrink-0" />
+          <span className="w-10 sm:w-12 shrink-0" />
         </div>
       </div>
 
