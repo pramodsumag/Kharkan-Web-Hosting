@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import HostingPlans from "@/components/HostingPlans";
+import LimitedTimeOffer from "@/components/LimitedTimeOffer";
 import MoneyBack from "@/components/MoneyBack";
 import DomainSearch from "@/components/DomainSearch";
 import Features from "@/components/Features";
@@ -110,6 +111,7 @@ export default function Home() {
       <Hero />
       <DomainSearch />
       <TrustBar />
+      <LimitedTimeOffer />
       <HostingPlans />
       <MoneyBack />
       <Features />
