@@ -9,6 +9,7 @@ import MoneyBack from "@/components/MoneyBack";
 import DomainSearch from "@/components/DomainSearch";
 import Features from "@/components/Features";
 import SpeedSecuritySuccess from "@/components/SpeedSecuritySuccess";
+import SmarterTools from "@/components/SmarterTools";
 import ComparisonTable from "@/components/ComparisonTable";
 import WhyKharkanTechnology from "@/components/WhyKharkanTechnology";
 import CustomerStories from "@/components/CustomerStories";
@@ -116,6 +117,7 @@ export default function Home() {
       <MoneyBack />
       <Features />
       <SpeedSecuritySuccess />
+      <SmarterTools />
       <ComparisonTable />
       <WhyKharkanTechnology />
       <CustomerStories />
