@@ -6,8 +6,8 @@ const plans = [
     name: "Starter",
     subtitle: "Perfect for beginners",
     pricing: {
-      monthly: { price: "99", originalPrice: "199", discount: "50% OFF", billing: "billed monthly + GST" },
-      yearly:  { price: "39", originalPrice: "195", discount: "80% OFF", billing: "billed annually + GST" },
+      monthly: { price: "29",  originalPrice: "145", discount: "80% OFF", billing: "billed monthly + GST" },
+      yearly:  { price: "399", originalPrice: "798", discount: "50% OFF", billing: "billed annually + GST" },
     },
     features: [
       "Host 1 Website",
@@ -45,8 +45,8 @@ const plans = [
     name: "Advanced",
     subtitle: "Best for growing sites",
     pricing: {
-      monthly: { price: "179", originalPrice: "359", discount: "50% OFF", billing: "billed monthly + GST" },
-      yearly:  { price: "69",  originalPrice: "345", discount: "80% OFF", billing: "billed annually + GST" },
+      monthly: { price: "49",  originalPrice: "245",  discount: "80% OFF", billing: "billed monthly + GST" },
+      yearly:  { price: "599", originalPrice: "1198", discount: "50% OFF", billing: "billed annually + GST" },
     },
     features: [
       "Host 10 Websites",
@@ -87,8 +87,8 @@ const plans = [
     name: "Ultimate",
     subtitle: "For high-traffic websites",
     pricing: {
-      monthly: { price: "249", originalPrice: "499", discount: "50% OFF", billing: "billed monthly + GST" },
-      yearly:  { price: "99",  originalPrice: "495", discount: "80% OFF", billing: "billed annually + GST" },
+      monthly: { price: "99",   originalPrice: "495",  discount: "80% OFF", billing: "billed monthly + GST" },
+      yearly:  { price: "1199", originalPrice: "2398", discount: "50% OFF", billing: "billed annually + GST" },
     },
     features: [
       "Host Unlimited Websites",
@@ -173,12 +173,17 @@ export default function HostingPlans() {
               <button
                 type="button"
                 onClick={() => setBilling("monthly")}
-                className={`relative z-10 px-5 sm:px-7 py-2 rounded-full text-sm font-bold transition-colors ${
+                className={`relative z-10 px-5 sm:px-7 py-2 rounded-full text-sm font-bold transition-colors flex items-center gap-2 ${
                   billing === "monthly" ? "bg-[#1565c0] text-white shadow-md" : "text-gray-600 hover:text-[#1565c0]"
                 }`}
                 data-testid="button-billing-monthly"
               >
                 Monthly
+                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                  billing === "monthly" ? "bg-white text-[#1565c0]" : "bg-green-100 text-green-700"
+                }`}>
+                  80% OFF
+                </span>
               </button>
               <button
                 type="button"
@@ -192,7 +197,7 @@ export default function HostingPlans() {
                 <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
                   billing === "yearly" ? "bg-white text-[#1565c0]" : "bg-green-100 text-green-700"
                 }`}>
-                  Save 80%
+                  50% OFF
                 </span>
               </button>
             </div>
