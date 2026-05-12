@@ -187,3 +187,12 @@
 .animate-blob { animation: blob 14s ease-in-out infinite; }
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
+
+@keyframes marquee-x {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-marquee-x {
+  animation: marquee-x 35s linear infinite;
+}
+.animate-marquee-x:hover { animation-play-state: paused; }

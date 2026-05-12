@@ -86,26 +86,36 @@ export default function DomainSearch() {
           </div>
         )}
 
-        {/* TLD price grid */}
-        <div className="flex flex-wrap justify-center gap-2 mt-8">
-          {tlds.map((tld) => (
-            <div
-              key={tld.ext}
-              className={`relative group flex items-center gap-2 px-4 py-2.5 rounded-xl border cursor-pointer transition-all duration-150 ${
-                tld.popular
-                  ? "bg-white/15 border-white/30 hover:bg-white/25"
-                  : "bg-white/8 border-white/15 hover:bg-white/15"
-              }`}
-            >
-              {tld.popular && (
-                <span className="absolute -top-2 -right-1 bg-yellow-400 text-[#1a237e] text-[8px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-wide leading-none">
-                  Hot
-                </span>
-              )}
-              <span className="text-white font-bold text-sm">{tld.ext}</span>
-              <span className="text-blue-200 text-xs font-medium">{tld.price}/yr</span>
-            </div>
-          ))}
+        {/* TLD price marquee (left → right) */}
+        <div
+          className="relative mt-8 overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          }}
+        >
+          <div className="flex w-max gap-2 animate-marquee-x">
+            {[...tlds, ...tlds].map((tld, i) => (
+              <div
+                key={`${tld.ext}-${i}`}
+                className={`relative group shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl border transition-all duration-150 ${
+                  tld.popular
+                    ? "bg-white/15 border-white/30 hover:bg-white/25"
+                    : "bg-white/8 border-white/15 hover:bg-white/15"
+                }`}
+              >
+                {tld.popular && (
+                  <span className="absolute -top-2 -right-1 bg-yellow-400 text-[#1a237e] text-[8px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-wide leading-none">
+                    Hot
+                  </span>
+                )}
+                <span className="text-white font-bold text-sm">{tld.ext}</span>
+                <span className="text-blue-200 text-xs font-medium">{tld.price}/yr</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Perks strip */}
