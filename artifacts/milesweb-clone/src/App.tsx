@@ -8,7 +8,9 @@ import Home from "@/pages/home";
 import ContactPage from "@/pages/contact";
 import AboutPage from "@/pages/about";
 import ServicePage from "@/pages/ServicePage";
+import InfoPage from "@/pages/InfoPage";
 import { services } from "@/data/services";
+import { infoPages } from "@/data/infoPages";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,9 @@ function Router() {
       <Route path="/about" component={AboutPage} />
       {Object.keys(services).map((slug) => (
         <Route key={slug} path={`/${slug}`} component={ServicePage} />
+      ))}
+      {Object.keys(infoPages).map((slug) => (
+        <Route key={slug} path={`/${slug}`} component={InfoPage} />
       ))}
       <Route component={NotFound} />
     </Switch>

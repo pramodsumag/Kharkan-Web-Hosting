@@ -1,8 +1,38 @@
 const links = {
-  Hosting: ["Shared Hosting", "WordPress Hosting", "Business Hosting", "Reseller Hosting", "Cloud Hosting", "VPS Hosting", "Dedicated Servers"],
-  Domains: ["Domain Registration", "Domain Transfer", "Bulk Domain Search", "Domain Renewal", "WHOIS Lookup", "Business Email"],
-  Company: ["About Us|/about", "Our Team|/about#team", "Careers", "Blog", "Press", "Partners", "Affiliates"],
-  Support: ["Help Center", "Contact Us|/contact", "Live Chat", "Knowledge Base", "Video Tutorials", "System Status"],
+  Hosting: [
+    "Shared Hosting|/web-hosting",
+    "WordPress Hosting|/wordpress-hosting",
+    "Business Hosting|/business-hosting",
+    "Reseller Hosting|/reseller-hosting",
+    "Cloud Hosting|/cloud-hosting",
+    "VPS Hosting|/vps-hosting",
+    "Dedicated Servers|/dedicated-servers",
+  ],
+  Domains: [
+    "Domain Registration|/domain-registration",
+    "Domain Transfer|/domain-transfer",
+    "Bulk Domain Search|/bulk-domain-search",
+    "Domain Renewal|/domain-renewal",
+    "WHOIS Lookup|/whois-lookup",
+    "Business Email|/business-email",
+  ],
+  Company: [
+    "About Us|/about",
+    "Our Team|/about#team",
+    "Careers|/careers",
+    "Blog|/blog",
+    "Press|/press",
+    "Partners|/partners",
+    "Affiliates|/affiliates",
+  ],
+  Support: [
+    "Help Center|/help-center",
+    "Contact Us|/contact",
+    "Live Chat|/live-chat",
+    "Knowledge Base|/knowledge-base",
+    "Video Tutorials|/video-tutorials",
+    "System Status|/system-status",
+  ],
 };
 
 export default function Footer() {
