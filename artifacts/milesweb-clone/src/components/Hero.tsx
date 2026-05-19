@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight, Search } from "lucide-react";
 
 const slides = [
   /* ── 1. Web Hosting ── deep orange-red */
@@ -146,6 +146,7 @@ export default function Hero() {
   const [current, setCurrent] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
   const [highlightIdx, setHighlightIdx] = useState(0);
+  const [heroSearch, setHeroSearch] = useState("");
 
   const goTo = useCallback(
     (idx: number) => {
@@ -360,22 +361,37 @@ export default function Hero() {
                   </div>
                 ))}
               </div>
-              <div className="p-4 flex items-center justify-between bg-white/5">
-                <div>
-                  <div className="text-white/55 text-xs">Starting from</div>
-                  <div className="text-white font-extrabold text-2xl leading-tight">
-                    {s.price}
-                    <span className="text-white/55 text-sm font-normal">{s.priceLabel}</span>
-                  </div>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const q = heroSearch.trim();
+                  if (!q) return;
+                  const el = document.getElementById("domain-search");
+                  el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  window.dispatchEvent(new CustomEvent("hero-domain-search", { detail: q }));
+                  setHeroSearch("");
+                }}
+                className="p-3 bg-white/5 flex items-center gap-2"
+              >
+                <div className="flex-1 flex items-center bg-white rounded-lg px-3 gap-2 min-w-0">
+                  <Search size={15} className="text-gray-400 shrink-0" />
+                  <input
+                    type="text"
+                    value={heroSearch}
+                    onChange={(e) => setHeroSearch(e.target.value)}
+                    placeholder="Search a domain, plan or feature…"
+                    className="flex-1 py-2.5 text-sm text-gray-800 outline-none bg-transparent placeholder-gray-400 min-w-0"
+                    aria-label="Search"
+                  />
                 </div>
-                <a
-                  href={s.ctaHref}
-                  className="bg-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-gray-100 transition-colors shadow"
+                <button
+                  type="submit"
+                  className="bg-white text-sm font-bold px-4 py-2.5 rounded-lg hover:bg-gray-100 transition-colors shadow shrink-0"
                   style={{ color: "#1a237e" }}
                 >
-                  Get Started →
-                </a>
-              </div>
+                  Search →
+                </button>
+              </form>
             </div>
           </div>
         </div>

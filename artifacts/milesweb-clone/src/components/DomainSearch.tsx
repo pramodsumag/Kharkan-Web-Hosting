@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Search, CheckCircle, ArrowRight, Globe } from "lucide-react";
 
 const tlds = [
@@ -23,14 +23,27 @@ const perks = [
 export default function DomainSearch() {
   const [query, setQuery] = useState("");
   const [searched, setSearched] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) setSearched(true);
   };
 
+  useEffect(() => {
+    const onHeroSearch = (e: Event) => {
+      const detail = (e as CustomEvent<string>).detail;
+      if (!detail) return;
+      setQuery(detail);
+      setSearched(true);
+      setTimeout(() => inputRef.current?.focus(), 600);
+    };
+    window.addEventListener("hero-domain-search", onHeroSearch as EventListener);
+    return () => window.removeEventListener("hero-domain-search", onHeroSearch as EventListener);
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0d1b6e] via-[#1a237e] to-[#1565c0] py-14 lg:py-20">
+    <section id="domain-search" className="relative overflow-hidden bg-gradient-to-br from-[#0d1b6e] via-[#1a237e] to-[#1565c0] py-14 lg:py-20">
       {/* Decorative blobs */}
       <div className="absolute -top-24 -right-24 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
@@ -60,6 +73,7 @@ export default function DomainSearch() {
           <div className="flex-1 flex items-center bg-white px-4 gap-2 min-w-0">
             <Search size={17} className="text-gray-400 shrink-0" />
             <input
+              ref={inputRef}
               type="text"
               value={query}
               onChange={(e) => { setQuery(e.target.value); setSearched(false); }}
