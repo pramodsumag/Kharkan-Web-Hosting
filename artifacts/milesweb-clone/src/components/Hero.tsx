@@ -24,6 +24,7 @@ const slides = [
     badgeBg: "bg-orange-300/20 text-orange-100",
     discountBg: "bg-yellow-400 text-yellow-900",
     imgUrl: heroWebHosting,
+    imgFit: "contain" as const,
     stats: [{ v: "99.99%", l: "Uptime" }, { v: "1M+", l: "Websites" }, { v: "24/7", l: "Support" }],
   },
   /* ── 2. Domain Registration ── deep teal-cyan */
@@ -202,12 +203,12 @@ export default function Hero() {
             style={{ animation: "heroFadeIn 0.6s ease both" }}
           >
             <div className="rounded-2xl border border-white/10 overflow-hidden shadow-xl bg-black/20">
-              <div className="relative h-32 sm:h-44 overflow-hidden">
+              <div className={`relative h-32 sm:h-44 overflow-hidden ${s.imgFit === "contain" ? "bg-gradient-to-b from-white/10 to-white/0" : ""}`}>
                 <img
                   key={`img-mob-${current}`}
                   src={s.imgUrl}
                   alt={s.title}
-                  className="hero-img w-full h-full object-cover"
+                  className={`hero-img w-full h-full ${s.imgFit === "contain" ? "object-contain object-bottom p-1" : "object-cover"}`}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -329,12 +330,12 @@ export default function Hero() {
             style={{ animation: "heroFadeIn 0.65s ease both" }}
           >
             <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm">
-              <div className="relative h-[390px] overflow-hidden">
+              <div className={`relative h-[390px] overflow-hidden ${s.imgFit === "contain" ? "bg-gradient-to-b from-white/10 to-white/0" : ""}`}>
                 <img
                   key={`img-desk-${current}`}
                   src={s.imgUrl}
                   alt={s.title}
-                  className="hero-img w-full h-full object-cover"
+                  className={`hero-img w-full h-full ${s.imgFit === "contain" ? "object-contain object-bottom p-3" : "object-cover"}`}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
