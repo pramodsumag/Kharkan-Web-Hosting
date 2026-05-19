@@ -358,9 +358,21 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-3 xl:px-4 flex items-center justify-between h-14 xl:h-16 gap-2">
 
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 shrink-0 min-w-0 group" data-testid="link-logo">
+        <a href="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0 min-w-0 group" data-testid="link-logo">
+          {/* Monogram badge */}
+          <div className="relative w-9 h-9 sm:w-10 sm:h-10 xl:w-11 xl:h-11 rounded-xl bg-gradient-to-br from-[#1a237e] via-[#1565c0] to-[#0288d1] flex items-center justify-center shadow-md shrink-0 overflow-hidden">
+            <span className="text-white font-extrabold text-[15px] sm:text-base xl:text-[17px] tracking-tight leading-none">KT</span>
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white" />
+          </div>
+
           <div className="flex flex-col leading-tight min-w-0">
-            <span className="text-[13px] sm:text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
+            {/* Mobile (≤sm): two-line stack so the full brand name always fits */}
+            <span className="sm:hidden text-[13px] font-extrabold text-[#1a237e] tracking-tight leading-[1.1]">
+              Kharkan
+              <span className="block text-[10px] font-bold text-[#1565c0] tracking-wide">Technology</span>
+            </span>
+            {/* sm+: single inline line */}
+            <span className="hidden sm:inline text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
               Kharkan <span className="text-[#1565c0]">Technology</span>
             </span>
             <span className="hidden sm:block text-[8px] xl:text-[9px] font-semibold text-emerald-500 tracking-wide whitespace-nowrap">
