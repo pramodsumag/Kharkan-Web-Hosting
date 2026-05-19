@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { CheckCircle2, ChevronLeft, ChevronRight, Search } from "lucide-react";
+import heroWebHosting from "@assets/Hosting_web_1779215950816.png";
 
 const slides = [
   /* ── 1. Web Hosting ── deep orange-red */
@@ -22,7 +23,7 @@ const slides = [
     accentColor: "#fed7aa",
     badgeBg: "bg-orange-300/20 text-orange-100",
     discountBg: "bg-yellow-400 text-yellow-900",
-    imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&h=620&fit=crop&q=80",
+    imgUrl: heroWebHosting,
     stats: [{ v: "99.99%", l: "Uptime" }, { v: "1M+", l: "Websites" }, { v: "24/7", l: "Support" }],
   },
   /* ── 2. Domain Registration ── deep teal-cyan */
