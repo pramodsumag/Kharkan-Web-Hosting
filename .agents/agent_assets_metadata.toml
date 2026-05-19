@@ -30,3 +30,9 @@ id = "eIHKCnduRkDm-fKoYl7Mv"
 uri = "file://kharkan-full-project.zip"
 type = "unspecified"
 title = "kharkan-full-project.zip — Complete monorepo source (226 files, 1.6 MB)"
+
+[[outputs]]
+id = "vZ81wMDsJnpO8_VLQU5h_"
+uri = "file://kharkan-full-project.tar.gz"
+type = "unspecified"
+title = "kharkan-full-project.tar.gz — Full monorepo source (1.3 MB)"
