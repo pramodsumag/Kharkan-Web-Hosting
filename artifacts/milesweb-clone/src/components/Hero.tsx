@@ -22,7 +22,7 @@ const slides = [
     accentColor: "#fed7aa",
     badgeBg: "bg-orange-300/20 text-orange-100",
     discountBg: "bg-yellow-400 text-yellow-900",
-    imgUrl: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=700&h=520&fit=crop&crop=top",
+    imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "99.99%", l: "Uptime" }, { v: "1M+", l: "Websites" }, { v: "24/7", l: "Support" }],
   },
   /* ── 2. Domain Registration ── deep teal-cyan */
@@ -45,7 +45,7 @@ const slides = [
     accentColor: "#5eead4",
     badgeBg: "bg-teal-300/20 text-teal-100",
     discountBg: "bg-teal-200 text-teal-900",
-    imgUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&h=520&fit=crop",
+    imgUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "500+", l: "Extensions" }, { v: "Free", l: "DNS Mgmt" }, { v: "Instant", l: "Activation" }],
   },
   /* ── 3. WordPress Hosting ── royal purple-indigo */
@@ -68,7 +68,7 @@ const slides = [
     accentColor: "#c4b5fd",
     badgeBg: "bg-violet-400/20 text-violet-100",
     discountBg: "bg-orange-400 text-orange-900",
-    imgUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=700&h=520&fit=crop",
+    imgUrl: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "3×", l: "Faster WP" }, { v: "Free", l: "Migration" }, { v: "100%", l: "WP Ready" }],
   },
   /* ── 4. VPS Hosting ── deep emerald green */
@@ -91,7 +91,7 @@ const slides = [
     accentColor: "#6ee7b7",
     badgeBg: "bg-emerald-300/20 text-emerald-100",
     discountBg: "bg-lime-400 text-lime-900",
-    imgUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&h=520&fit=crop",
+    imgUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "NVMe", l: "SSD Storage" }, { v: "10Gbps", l: "Network" }, { v: "IPv6", l: "Ready" }],
   },
   /* ── 5. Business Email ── warm amber-gold */
@@ -114,7 +114,7 @@ const slides = [
     accentColor: "#fde68a",
     badgeBg: "bg-amber-300/20 text-amber-100",
     discountBg: "bg-yellow-300 text-yellow-900",
-    imgUrl: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=700&h=520&fit=crop",
+    imgUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "50 GB", l: "Mailbox" }, { v: "99.9%", l: "Delivery" }, { v: "256-bit", l: "Encryption" }],
   },
   /* ── 6. Reseller Hosting ── deep fuchsia-purple */
@@ -137,7 +137,7 @@ const slides = [
     accentColor: "#e9d5ff",
     badgeBg: "bg-fuchsia-300/20 text-fuchsia-100",
     discountBg: "bg-pink-300 text-pink-900",
-    imgUrl: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&h=520&fit=crop",
+    imgUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "WHM", l: "Control Panel" }, { v: "Free", l: "WHMCS" }, { v: "Unlimited", l: "Accounts" }],
   },
   /* ── 7. Web Development ── ocean blue-sky */
@@ -160,7 +160,7 @@ const slides = [
     accentColor: "#bae6fd",
     badgeBg: "bg-sky-300/20 text-sky-100",
     discountBg: "bg-cyan-300 text-cyan-900",
-    imgUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&h=520&fit=crop",
+    imgUrl: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "100+", l: "Projects" }, { v: "Free", l: "SEO Setup" }, { v: "1 Yr", l: "Support" }],
   },
   /* ── 8. Software Development ── rose-crimson */
@@ -183,7 +183,7 @@ const slides = [
     accentColor: "#fda4af",
     badgeBg: "bg-rose-300/20 text-rose-100",
     discountBg: "bg-rose-200 text-rose-900",
-    imgUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=700&h=520&fit=crop",
+    imgUrl: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=900&h=620&fit=crop&q=80",
     stats: [{ v: "50+", l: "Apps Built" }, { v: "Agile", l: "Process" }, { v: "NDA", l: "Protected" }],
   },
 ];
@@ -248,9 +248,10 @@ export default function Hero() {
             <div className="rounded-2xl border border-white/10 overflow-hidden shadow-xl bg-black/20">
               <div className="relative h-32 sm:h-44 overflow-hidden">
                 <img
+                  key={`img-mob-${current}`}
                   src={s.imgUrl}
                   alt={s.title}
-                  className="w-full h-full object-cover"
+                  className="hero-img w-full h-full object-cover"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -374,9 +375,10 @@ export default function Hero() {
             <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm">
               <div className="relative h-[390px] overflow-hidden">
                 <img
+                  key={`img-desk-${current}`}
                   src={s.imgUrl}
                   alt={s.title}
-                  className="w-full h-full object-cover"
+                  className="hero-img w-full h-full object-cover"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -495,8 +497,21 @@ export default function Hero() {
 
       <style>{`
         @keyframes heroFadeIn {
-          from { opacity: 0; transform: translateY(14px); }
-          to   { opacity: 1; transform: translateY(0); }
+          from { opacity: 0; transform: translateX(40px); filter: blur(6px); }
+          to   { opacity: 1; transform: translateX(0);    filter: blur(0); }
+        }
+        @keyframes heroSlideInLeft {
+          from { opacity: 0; transform: translateX(-40px); filter: blur(6px); }
+          to   { opacity: 1; transform: translateX(0);     filter: blur(0); }
+        }
+        @keyframes heroImageZoom {
+          0%   { transform: scale(1.18); opacity: 0; }
+          40%  { opacity: 1; }
+          100% { transform: scale(1.0);  opacity: 1; }
+        }
+        @keyframes heroKenBurns {
+          0%   { transform: scale(1.0)  translate(0, 0); }
+          100% { transform: scale(1.08) translate(-12px, -8px); }
         }
         @keyframes marqueeWordIn {
           from { opacity: 0; transform: translateY(110%); }
@@ -504,6 +519,10 @@ export default function Hero() {
         }
         .marquee-word {
           animation: marqueeWordIn 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+        }
+        .hero-img {
+          animation: heroImageZoom 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both,
+                     heroKenBurns 12s ease-in-out 0.9s infinite alternate;
         }
         .overflow-x-auto::-webkit-scrollbar { display: none; }
       `}</style>
