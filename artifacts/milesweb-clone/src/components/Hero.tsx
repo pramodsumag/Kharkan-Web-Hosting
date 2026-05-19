@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
-import heroWebHosting from "@assets/Hosting_web_1779215950816.png";
+import heroWebHosting from "@assets/Hosting_web_1779216230714.png";
 
 const slides = [
   /* ── 1. Web Hosting ── deep orange-red */
