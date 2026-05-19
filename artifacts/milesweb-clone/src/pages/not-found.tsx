@@ -2,10 +2,16 @@ import { Home, ArrowLeft, Search, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
+import SEO from "@/components/SEO";
 
 export default function NotFound() {
   return (
     <>
+      <SEO
+        title="Page Not Found (404)"
+        description="The page you're looking for doesn't exist or has moved. Browse Kharkan Technology's hosting plans, knowledge base, or contact our 24/7 support team."
+        noIndex
+      />
       <TopBar />
       <Header />
       <main className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a0e2e] via-[#1a237e] to-[#312e81] py-20 px-4">

@@ -1,11 +1,40 @@
 import { useState, useEffect } from "react";
 import { useRoute, Link } from "wouter";
-import { Helmet } from "react-helmet-async";
 import * as Icons from "lucide-react";
 import { infoPages } from "@/data/infoPages";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import NotFound from "@/pages/not-found";
+
+/* Per-slug keyword boosters merged with auto-derived terms */
+const KEYWORD_BOOSTERS: Record<string, string> = {
+  "business-hosting":   "business hosting India, enterprise web hosting, dedicated CPU hosting, JetBackup hosting, Cloudflare CDN hosting India",
+  "cloud-hosting":      "cloud hosting India, auto scaling hosting, cluster hosting, LiteSpeed cloud, Mumbai cloud hosting, NVMe cloud servers",
+  "dedicated-servers":  "dedicated servers India, bare metal server, Intel Xeon dedicated server, 10 Gbps unmetered server, managed dedicated server India",
+  "domain-transfer":    "domain transfer India, transfer domain to Kharkan, free year domain transfer, EPP code transfer, change registrar India",
+  "bulk-domain-search": "bulk domain search, check multiple domains, bulk domain availability, bulk domain registration India, domain finder tool",
+  "domain-renewal":     "domain renewal India, renew domain online, auto renew domain, 10 year domain renewal, cheap domain renewal",
+  "whois-lookup":       "WHOIS lookup, free WHOIS tool, domain owner lookup, check domain expiry, domain registrar lookup India",
+  careers:              "careers Kharkan, web hosting jobs India, remote tech jobs India, Madhepura jobs, hosting company careers, ESOP startup India",
+  blog:                 "Kharkan blog, web hosting blog India, WordPress tutorials, hosting tips, server performance blog, SEO articles India",
+  press:                "Kharkan press, web hosting news India, press releases, media kit Kharkan, hosting company India news",
+  partners:             "Kharkan partner program, hosting reseller program, agency partner India, recurring commission hosting, white label partner",
+  affiliates:           "Kharkan affiliate, web hosting affiliate India, hosting referral program, ₹1500 per signup, blog affiliate hosting",
+  "help-center":        "Kharkan help center, web hosting support, cPanel help articles, hosting knowledge base, WordPress help India",
+  "live-chat":          "Kharkan live chat, 24/7 hosting support, WhatsApp hosting support, Hindi hosting support, instant hosting help",
+  "knowledge-base":     "Kharkan knowledge base, hosting documentation, server tuning guides, MySQL tuning, Nginx config, developer docs India",
+  "video-tutorials":    "Kharkan video tutorials, WordPress video Hindi, cPanel tutorial video, hosting YouTube India, web hosting tutorials",
+  "system-status":      "Kharkan system status, hosting uptime status, service health, incident reports, hosting outage India",
+};
+
+const BASE_KEYWORDS = "Kharkan Technology, web hosting India, Indian web hosting, hosting provider India";
+
+function buildKeywords(slug: string, title: string) {
+  const fromSlug = slug.replace(/-/g, " ");
+  const boost = KEYWORD_BOOSTERS[slug] ?? "";
+  return [title, fromSlug, boost, BASE_KEYWORDS].filter(Boolean).join(", ");
+}
 
 function Icon({ name, className }: { name: string; className?: string }) {
   const Cmp = (Icons as unknown as Record<string, React.ComponentType<{ className?: string; size?: number }>>)[name] ?? Icons.Sparkles;
@@ -317,10 +346,24 @@ export default function InfoPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{page.title} · Kharkan Technology</title>
-        <meta name="description" content={page.tagline} />
-      </Helmet>
+      <SEO
+        title={`${page.title} — ${page.eyebrow}`}
+        description={`${page.tagline} ${page.intro}`.slice(0, 240)}
+        keywords={buildKeywords(page.slug, page.title)}
+        canonical={`/${page.slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: page.title,
+          description: page.tagline,
+          url: `https://kharkantechnology.in/${page.slug}`,
+          publisher: {
+            "@type": "Organization",
+            name: "Kharkan Technology",
+            url: "https://kharkantechnology.in",
+          },
+        }}
+      />
 
       <Header />
 
