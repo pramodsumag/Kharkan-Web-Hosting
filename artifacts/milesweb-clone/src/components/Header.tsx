@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import {
   ChevronDown, Menu, X,
-  Globe, LayoutTemplate, Briefcase, Users, Cloud,
-  Shield, ShoppingCart, Server, HardDrive, Zap,
+  Globe, LayoutTemplate, Briefcase, Users,
+  Shield, ShoppingCart,
   Mail, AtSign, RefreshCw, Headphones, BookOpen,
   MessageCircle, Phone, Info, UserSquare, Award, Rss,
   ArrowRight, Sparkles, Star,
@@ -28,19 +28,12 @@ const hostingItems: NavItem[] = [
   { icon: LayoutTemplate, label: "WordPress Hosting", desc: "Blazing-fast WP with 1-click install", href: "/wordpress-hosting", badge: "Best Value", iconBg: "from-purple-500 to-purple-600" },
   { icon: Briefcase,      label: "Business Email",    desc: "Professional @yourdomain email",       href: "/business-email",                       iconBg: "from-indigo-500 to-indigo-600" },
   { icon: Users,          label: "Reseller Hosting",  desc: "Launch your own hosting business",     href: "/reseller-hosting",                     iconBg: "from-cyan-500 to-cyan-600" },
-  { icon: Cloud,          label: "VPS Hosting",       desc: "Full root access, SSD-powered",        href: "/vps-hosting",       badge: "New",        iconBg: "from-sky-500 to-sky-600" },
 ];
 
 const wordpressItems: NavItem[] = [
   { icon: Shield,         label: "Managed WordPress",   desc: "Auto-updates, backups & staging",     href: "/wordpress-hosting", badge: "Popular",    iconBg: "from-blue-600 to-indigo-600" },
   { icon: LayoutTemplate, label: "WordPress Hosting",   desc: "LiteSpeed-powered, ultra-affordable", href: "/wordpress-hosting", badge: "Best Value", iconBg: "from-purple-500 to-purple-600" },
   { icon: ShoppingCart,   label: "WooCommerce Hosting", desc: "Built for high-traffic online stores", href: "/wordpress-hosting",                    iconBg: "from-green-500 to-emerald-600" },
-];
-
-const vpsItems: NavItem[] = [
-  { icon: Server,    label: "VPS Hosting",       desc: "Full root access, SSD-powered",    href: "/vps-hosting", iconBg: "from-orange-500 to-orange-600" },
-  { icon: HardDrive, label: "Dedicated Servers", desc: "Maximum power & isolation",        href: "/vps-hosting", iconBg: "from-red-500 to-red-600" },
-  { icon: Zap,       label: "Cloud VPS",         desc: "Elastic cloud virtual servers",    href: "/vps-hosting", iconBg: "from-yellow-500 to-amber-600" },
 ];
 
 const domainItems: NavItem[] = [
@@ -337,7 +330,6 @@ interface NavConfig {
 const navConfig: NavConfig[] = [
   { label: "Hosting",         type: "hosting" },
   { label: "WordPress",       type: "wordpress" },
-  { label: "VPS & Dedicated", type: "standard",   items: vpsItems,    accentFrom: "from-orange-500", accentTo: "to-red-500" },
   { label: "Domain & Email",  type: "standard",   items: domainItems, accentFrom: "from-blue-400",   accentTo: "to-teal-500" },
   { label: "SEO & Design",    type: "seodesign" },
   { label: "Support",         type: "standard",   items: supportItems, accentFrom: "from-green-500", accentTo: "to-cyan-500" },
