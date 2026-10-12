@@ -36,6 +36,15 @@ function buildKeywords(slug: string, title: string) {
   return [title, fromSlug, boost, BASE_KEYWORDS].filter(Boolean).join(", ");
 }
 
+function buildMetaDescription(tagline: string, intro: string) {
+  const description = `${tagline} ${intro}`.replace(/\s+/g, " ").trim();
+  if (description.length <= 160) return description;
+
+  const excerpt = description.slice(0, 157);
+  const lastWordBoundary = excerpt.lastIndexOf(" ");
+  return `${excerpt.slice(0, lastWordBoundary > 0 ? lastWordBoundary : excerpt.length).replace(/[.,;:!?]+$/, "")}…`;
+}
+
 function Icon({ name, className }: { name: string; className?: string }) {
   const Cmp = (Icons as unknown as Record<string, React.ComponentType<{ className?: string; size?: number }>>)[name] ?? Icons.Sparkles;
   return <Cmp className={className} size={20} />;
@@ -347,8 +356,8 @@ export default function InfoPage() {
   return (
     <>
       <SEO
-        title={`${page.title} — ${page.eyebrow}`}
-        description={`${page.tagline} ${page.intro}`.slice(0, 240)}
+        title={page.title}
+        description={buildMetaDescription(page.tagline, page.intro)}
         keywords={buildKeywords(page.slug, page.title)}
         canonical={`/${page.slug}`}
         jsonLd={{

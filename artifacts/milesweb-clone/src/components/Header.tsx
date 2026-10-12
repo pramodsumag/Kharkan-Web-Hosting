@@ -358,24 +358,25 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-3 xl:px-4 flex items-center justify-between h-14 xl:h-16 gap-2">
 
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0 min-w-0 group" data-testid="link-logo">
-          {/* Monogram badge */}
-          <div className="relative w-9 h-9 sm:w-10 sm:h-10 xl:w-11 xl:h-11 rounded-xl bg-gradient-to-br from-[#1a237e] via-[#1565c0] to-[#0288d1] flex items-center justify-center shadow-md shrink-0 overflow-hidden">
-            <span className="text-white font-extrabold text-[15px] sm:text-base xl:text-[17px] tracking-tight leading-none">KT</span>
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white" />
-          </div>
-
+        <a
+          href="/"
+          className="flex items-center gap-1.5 sm:gap-2.5 shrink-0 min-w-0 group"
+          data-testid="link-logo"
+          aria-label="Kharkan Technology home"
+        >
+          <img
+            src="/kharkan-logo-mark.png"
+            alt=""
+            width="56"
+            height="31"
+            className="w-11 h-8 sm:w-[52px] sm:h-[30px] xl:w-14 xl:h-8 object-contain shrink-0"
+          />
           <div className="flex flex-col leading-tight min-w-0">
-            {/* Mobile (≤sm): two-line stack so the full brand name always fits */}
-            <span className="sm:hidden text-[13px] font-extrabold text-[#1a237e] tracking-tight leading-[1.1]">
-              Kharkan
-              <span className="block text-[10px] font-bold text-[#1565c0] tracking-wide">Technology</span>
+            <span className="text-[12px] sm:text-base xl:text-[17px] font-extrabold whitespace-nowrap tracking-tight">
+              <span className="text-[#F26422]">Kharkan</span>{" "}
+              <span className="text-[#1565c0]">Technology</span>
             </span>
-            {/* sm+: single inline line */}
-            <span className="hidden sm:inline text-base xl:text-[17px] font-extrabold text-[#1a237e] whitespace-nowrap tracking-tight">
-              Kharkan <span className="text-[#1565c0]">Technology</span>
-            </span>
-            <span className="hidden sm:block text-[8px] xl:text-[9px] font-semibold text-emerald-500 tracking-wide whitespace-nowrap">
+            <span className="hidden sm:block text-[8px] xl:text-[9px] font-semibold text-[#1565c0] tracking-wide whitespace-nowrap">
               Your Web Hosting, Our Responsibility.
             </span>
           </div>
@@ -442,10 +443,7 @@ export default function Header() {
             className="flex items-center gap-1.5 text-[13px] font-semibold text-[#1a237e] border border-[#1a237e]/20 bg-blue-50 hover:bg-blue-100 hover:border-[#1a237e]/40 transition-all px-3.5 py-1.5 rounded-xl whitespace-nowrap shadow-sm"
             data-testid="link-my-account"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="8" r="4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round"/>
-              <path d="M4 20c0-3.314 3.582-6 8-6s8 2.686 8 6" stroke="#1a237e" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
+            <img src="/favicon.png" alt="" width="18" height="18" className="w-[18px] h-[18px] object-contain" />
             My Account
           </a>
           <a

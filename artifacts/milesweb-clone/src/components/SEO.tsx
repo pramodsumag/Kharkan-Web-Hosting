@@ -14,6 +14,7 @@ interface SEOProps {
 const SITE_NAME = "Kharkan Technology";
 const SITE_URL = "https://kharkantechnology.in";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph.jpg`;
+const BRAND_KEYWORDS = ["Kharkan Technology", "Kharkan Hosting", "Khankan Web Hosting"];
 
 export default function SEO({
   title,
@@ -27,13 +28,16 @@ export default function SEO({
 }: SEOProps) {
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
+  const keywordContent = [...new Set([...(keywords ?? "").split(","), ...BRAND_KEYWORDS]
+    .map((keyword) => keyword.trim())
+    .filter(Boolean))].join(", ");
 
   return (
     <Helmet>
       {/* Primary */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="keywords" content={keywordContent} />
       <link rel="canonical" href={canonicalUrl} />
       {noIndex && <meta name="robots" content="noindex,nofollow" />}
       {!noIndex && <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />}

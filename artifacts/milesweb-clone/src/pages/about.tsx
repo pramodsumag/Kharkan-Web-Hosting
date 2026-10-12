@@ -126,8 +126,8 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="About Us — India's Trusted Web Hosting Company Since 2012"
-        description="Kharkan Technology was founded in Pune in 2012 with a mission to make world-class web hosting affordable for every Indian business. Today we power 10 lakh+ websites across 190+ countries."
+        title="About Kharkan Technology | Hosting Since 2012"
+        description="Learn how Kharkan Technology grew from a 2012 Indian hosting startup into a trusted provider serving businesses across 190+ countries with expert support."
         keywords="about Kharkan Technology, Indian hosting company, web hosting company India, Pune hosting company, trusted web hosting India"
         canonical="/about"
         jsonLd={aboutJsonLd}

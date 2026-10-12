@@ -141,8 +141,8 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Contact Us — 24/7 Support | Kharkan Technology"
-        description="Get in touch with Kharkan Technology's expert support team anytime. Call +91 7011058947, email support@kharkan.com, or use live chat. Head office in Pune, India."
+        title="Contact Kharkan Technology | 24/7 Support"
+        description="Contact Kharkan Technology support for web hosting and domain help. Reach our team by phone, email or live chat, with local support in Madhepura."
         keywords="contact Kharkan Technology, hosting support India, web hosting help, Pune hosting company contact, 24/7 hosting support"
         canonical="/contact"
         jsonLd={contactJsonLd}

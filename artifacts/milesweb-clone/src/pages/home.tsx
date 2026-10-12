@@ -26,7 +26,7 @@ const homeJsonLd = [
     "name": "Kharkan Technology",
     "alternateName": "Kharkan Technology Pvt. Ltd.",
     "url": "https://kharkantechnology.in",
-    "logo": "https://kharkantechnology.in/favicon.svg",
+    "logo": "https://kharkantechnology.in/kharkan-logo-mark.png",
     "description": "India's fastest web hosting company — LiteSpeed servers, 99.99% uptime, free SSL, free domain & 24/7 expert support. Trusted by 1M+ websites since 2012.",
     "foundingDate": "2012",
     "foundingLocation": "Madhepura, Bihar, India",
@@ -101,9 +101,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Web Hosting from ₹29/mo | India's Fastest & Trusted Host"
-        description="Kharkan Technology offers India's fastest web hosting from ₹29/mo. LiteSpeed servers, 99.99% uptime, free SSL, free domain & 24/7 expert support. Trusted by 1M+ websites."
-        keywords="web hosting India, cheap hosting India, wordpress hosting, shared hosting, domain registration, LiteSpeed hosting, Indian web hosting, hosting ₹29"
+        title="Affordable Web Hosting from ₹29/mo"
+        description="Affordable web hosting in India, WordPress, VPS and dedicated servers, plus domain services and 24x7 expert support from Kharkan Technology in Madhepura."
+        keywords="web hosting India, VPS hosting, dedicated server hosting, WordPress hosting, IT service Madhepura, IT services Madhepura, unlimited hosting, free hosting, cheap hosting price, affordable plan, affordable hosting plans, high performance hosting, best web hosting, best hosting support, reliable website hosting, cPanel hosting, cloud hosting, domain services, fast performance, 24x7 expert support, Hostycare, Hostinger, GoDaddy, Kharkan Technology, Kharkan Hosting, Khankan Web Hosting"
         canonical="/"
         jsonLd={homeJsonLd}
       />

@@ -1,0 +1,1 @@
+- [Kharkan wordmark colors](kharkan-brand-colors.md) — Use orange for “Kharkan” and blue for “Technology” in the site wordmark.
