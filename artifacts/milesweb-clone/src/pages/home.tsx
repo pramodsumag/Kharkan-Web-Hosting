@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import SEO from "@/components/SEO";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
@@ -98,8 +99,59 @@ const homeJsonLd = [
 ];
 
 export default function Home() {
+  const pageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const page = pageRef.current;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (!page || prefersReducedMotion || !("IntersectionObserver" in window)) {
+      return;
+    }
+
+    const revealItems = Array.from(
+      page.querySelectorAll<HTMLElement>(
+        "section:not([data-no-scroll-reveal]), [data-scroll-reveal]"
+      )
+    );
+    let cardIndex = 0;
+
+    revealItems.forEach((item) => {
+      item.classList.add("scroll-reveal");
+
+      if (item.dataset.scrollReveal === "card") {
+        item.style.setProperty(
+          "--scroll-reveal-delay",
+          `${(cardIndex % 4) * 90}ms`
+        );
+        cardIndex += 1;
+      }
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("scroll-revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white">
+    <div ref={pageRef} className="min-h-screen bg-white">
       <SEO
         title="Affordable Web Hosting from ₹29/mo"
         description="Affordable web hosting in India, WordPress, VPS and dedicated servers, plus domain services and 24x7 expert support from Kharkan Technology in Madhepura."

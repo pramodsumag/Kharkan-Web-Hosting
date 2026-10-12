@@ -184,7 +184,7 @@ export default function Hero() {
   const s = slides[current % slides.length];
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" data-no-scroll-reveal>
       {/* ── Gradient background ── */}
       <div className={`relative bg-gradient-to-br ${s.gradient} transition-all duration-700`}>
         {/* Decorative blobs */}

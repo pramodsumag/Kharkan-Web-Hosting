@@ -179,6 +179,33 @@
   body { @apply font-sans antialiased bg-background text-foreground; }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-reveal {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    transition:
+      opacity 650ms cubic-bezier(0.22, 0.61, 0.36, 1),
+      transform 650ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-delay: var(--scroll-reveal-delay, 0ms);
+  }
+
+  .scroll-reveal.scroll-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @keyframes blob {
   0%, 100% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(40px, -30px) scale(1.08); }
